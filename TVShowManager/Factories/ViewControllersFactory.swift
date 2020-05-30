@@ -11,6 +11,7 @@ import Swinject
 
 protocol IViewControllersFactory: IFactory {
     func appStartViewController() -> IAppStartViewController
+    func homeViewController() -> IHomeViewController
 }
 
 final class ViewControllersFactory: IFactory {
@@ -27,7 +28,16 @@ final class ViewControllersFactory: IFactory {
             let presenter = AppStartViewControllerPresenter()
             let lps = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
             let interactor = AppStartViewControllerInteractor(presenter: presenter, localPersistentStore: lps)
-            let viewController = AppStartViewController(interactor: interactor)
+            let viewController = AppStartViewController(interactor: interactor, viewControllersFactory: self)
+            presenter.resolveDependencies(viewController: viewController)
+
+            return viewController
+        }
+
+        container.register(IHomeViewController.self) { _ in
+            let presenter = HomeViewControllerPresenter()
+            let interactor = HomeViewControllerInteractor(presenter: presenter)
+            let viewController = HomeViewController(interactor: interactor)
             presenter.resolveDependencies(viewController: viewController)
 
             return viewController
@@ -40,5 +50,9 @@ final class ViewControllersFactory: IFactory {
 extension ViewControllersFactory: IViewControllersFactory {
     func appStartViewController() -> IAppStartViewController {
         return container.resolve(IAppStartViewController.self)!
+    }
+
+    func homeViewController() -> IHomeViewController {
+        return container.resolve(IHomeViewController.self)!
     }
 }

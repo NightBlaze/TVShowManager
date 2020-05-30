@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
 
         let startViewController = factory.viewControllersFactory().appStartViewController()
-        startViewController.setAsRoot(forWindow: window)
+        startViewController.setAsRootWindow(for: window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

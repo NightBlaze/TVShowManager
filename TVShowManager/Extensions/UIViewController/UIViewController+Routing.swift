@@ -9,8 +9,12 @@
 import UIKit
 
 extension UIViewController {
-    func setAsRoot(forWindow window: UIWindow) {
-        window.rootViewController = self
-        window.makeKeyAndVisible()
+    func setAsRootWindow(for: UIWindow? = nil) {
+        var window = `for`
+        if window == nil {
+            window = UIApplication.shared.windows.filter { !$0.isHidden }.first
+        }
+        window?.rootViewController = self
+        window?.makeKeyAndVisible()
     }
 }

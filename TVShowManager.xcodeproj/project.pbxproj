@@ -12,6 +12,10 @@
 		FF0722CA2482AC80005E986C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF0722CC2482AC80005E986C /* Localizable.strings */; };
 		FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D02482AD8C005E986C /* String+Localization.swift */; };
 		FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D32482AF32005E986C /* UIViewController+Routing.swift */; };
+		FF0722D82482B019005E986C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D62482B019005E986C /* HomeViewController.swift */; };
+		FF0722D92482B019005E986C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722D72482B019005E986C /* HomeViewController.xib */; };
+		FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */; };
+		FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */; };
@@ -39,6 +43,10 @@
 		FF0722CE2482ACA3005E986C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF0722D02482AD8C005E986C /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		FF0722D32482AF32005E986C /* UIViewController+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Routing.swift"; sourceTree = "<group>"; };
+		FF0722D62482B019005E986C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF0722D72482B019005E986C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
+		FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerPresenter.swift; sourceTree = "<group>"; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +109,17 @@
 				FF0722D32482AF32005E986C /* UIViewController+Routing.swift */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		FF0722D52482AFF6005E986C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF0722D62482B019005E986C /* HomeViewController.swift */,
+				FF0722D72482B019005E986C /* HomeViewController.xib */,
+				FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */,
+				FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FF155BF12482403100F76D38 = {
@@ -206,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				FF1A0B1B24824D5700E406E9 /* AppStart */,
+				FF0722D52482AFF6005E986C /* Home */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -316,6 +336,7 @@
 			files = (
 				FF155C0D2482403200F76D38 /* LaunchScreen.storyboard in Resources */,
 				FF0722CA2482AC80005E986C /* Localizable.strings in Resources */,
+				FF0722D92482B019005E986C /* HomeViewController.xib in Resources */,
 				FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */,
 				FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */,
 			);
@@ -380,8 +401,11 @@
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
 				FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
+				FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
+				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
+				FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */,
 				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,
 				FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */,
 				FF1A0B1E24824D8B00E406E9 /* AppStartViewController.swift in Sources */,

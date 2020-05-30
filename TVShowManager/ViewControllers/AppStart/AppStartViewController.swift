@@ -17,9 +17,12 @@ class AppStartViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
 
     let interactor: IAppStartViewControllerInteractor
+    let viewControllersFactory: IViewControllersFactory
 
-    init(interactor: IAppStartViewControllerInteractor) {
+    init(interactor: IAppStartViewControllerInteractor,
+         viewControllersFactory: IViewControllersFactory) {
         self.interactor = interactor
+        self.viewControllersFactory = viewControllersFactory
         super.init(nibName: AppStartViewController.nameOfClass(), bundle: nil)
     }
 
@@ -49,6 +52,7 @@ extension AppStartViewController: IAppStartViewController {
     }
 
     func goToHomeViewController() {
-        print("Go To Home View Controller")
+        let homeViewController = viewControllersFactory.homeViewController()
+        homeViewController.setAsRootWindow()
     }
 }
