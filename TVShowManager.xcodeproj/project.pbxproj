@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */; };
 		FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF155C092482403200F76D38 /* Assets.xcassets */; };
 		FF155C0D2482403200F76D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF155C0B2482403200F76D38 /* LaunchScreen.storyboard */; };
+		FF1A0B172482456700E406E9 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B162482456700E406E9 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FF155C092482403200F76D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF155C0C2482403200F76D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF155C0E2482403200F76D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF1A0B162482456700E406E9 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				2DE3CA32F0725AB4933D1C3B /* Pods-TVShowManager.debug.xcconfig */,
 				29570827196E8DA26C93DF60 /* Pods-TVShowManager.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,12 +86,21 @@
 			children = (
 				FF6E470824824121001BE330 /* Application */,
 				FF6E470D2482417B001BE330 /* DataLayer */,
+				FF1A0B152482454100E406E9 /* Factories */,
 				FF6E470B24824164001BE330 /* Resources */,
 				FF6E470A2482413C001BE330 /* Storyboards */,
 				FF6E470C2482416E001BE330 /* SupportingFiles */,
 				FF6E470924824131001BE330 /* ViewControllers */,
 			);
 			path = TVShowManager;
+			sourceTree = "<group>";
+		};
+		FF1A0B152482454100E406E9 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A0B162482456700E406E9 /* Factory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		FF6E470824824121001BE330 /* Application */ = {
@@ -270,6 +280,7 @@
 				FF155C022482403100F76D38 /* ViewController.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
+				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
