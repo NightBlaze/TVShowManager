@@ -17,6 +17,10 @@
 		FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */; };
 		FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */; };
 		FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */; };
+		FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722E42482DBE9005E986C /* AddTVShowViewController.swift */; };
+		FF0722E72482DBE9005E986C /* AddTVShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722E52482DBE9005E986C /* AddTVShowViewController.xib */; };
+		FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722E82482DC07005E986C /* AddTVShowInteractor.swift */; };
+		FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722EA2482DC22005E986C /* AddTVShowPresenter.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */; };
@@ -49,6 +53,10 @@
 		FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
 		FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerPresenter.swift; sourceTree = "<group>"; };
 		FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UINavigationController.swift"; sourceTree = "<group>"; };
+		FF0722E42482DBE9005E986C /* AddTVShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowViewController.swift; sourceTree = "<group>"; };
+		FF0722E52482DBE9005E986C /* AddTVShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTVShowViewController.xib; sourceTree = "<group>"; };
+		FF0722E82482DC07005E986C /* AddTVShowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowInteractor.swift; sourceTree = "<group>"; };
+		FF0722EA2482DC22005E986C /* AddTVShowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowPresenter.swift; sourceTree = "<group>"; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +131,17 @@
 				FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FF0722E32482DBC8005E986C /* AddTVShow */ = {
+			isa = PBXGroup;
+			children = (
+				FF0722E82482DC07005E986C /* AddTVShowInteractor.swift */,
+				FF0722EA2482DC22005E986C /* AddTVShowPresenter.swift */,
+				FF0722E42482DBE9005E986C /* AddTVShowViewController.swift */,
+				FF0722E52482DBE9005E986C /* AddTVShowViewController.xib */,
+			);
+			path = AddTVShow;
 			sourceTree = "<group>";
 		};
 		FF155BF12482403100F76D38 = {
@@ -227,6 +246,7 @@
 		FF6E470924824131001BE330 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF0722E32482DBC8005E986C /* AddTVShow */,
 				FF1A0B1B24824D5700E406E9 /* AppStart */,
 				FF0722D52482AFF6005E986C /* Home */,
 			);
@@ -342,6 +362,7 @@
 				FF0722D92482B019005E986C /* HomeViewController.xib in Resources */,
 				FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */,
 				FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */,
+				FF0722E72482DBE9005E986C /* AddTVShowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,13 +423,16 @@
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,
 				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
+				FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */,
 				FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
 				FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */,
+				FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
 				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
+				FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */,
 				FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */,
 				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,
 				FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */,

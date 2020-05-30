@@ -10,6 +10,7 @@ import Foundation
 import Swinject
 
 protocol IViewControllersFactory: IFactory {
+    func addTVShowViewController() -> IAddTVShowViewController
     func appStartViewController() -> IAppStartViewController
     func homeViewController() -> IHomeViewController
 }
@@ -24,6 +25,15 @@ final class ViewControllersFactory: IFactory {
     }
 
     func register() {
+        container.register(IAddTVShowViewController.self) { _ in
+            let presenter = AddTVShowPresenter()
+            let interactor = AddTVShowInteractor(presenter: presenter)
+            let viewController = AddTVShowViewController(interactor: interactor)
+            presenter.resolveDependencies(viewController: viewController)
+
+            return viewController
+        }
+
         container.register(IAppStartViewController.self) { [unowned self] _ in
             let presenter = AppStartViewControllerPresenter()
             let lps = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
@@ -48,6 +58,10 @@ final class ViewControllersFactory: IFactory {
 // MARK: - IViewControllersFactory
 
 extension ViewControllersFactory: IViewControllersFactory {
+    func addTVShowViewController() -> IAddTVShowViewController {
+        return container.resolve(IAddTVShowViewController.self)!
+    }
+
     func appStartViewController() -> IAppStartViewController {
         return container.resolve(IAppStartViewController.self)!
     }
