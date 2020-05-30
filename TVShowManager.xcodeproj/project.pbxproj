@@ -14,7 +14,6 @@
 		FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D32482AF32005E986C /* UIViewController+Routing.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
-		FF155C022482403100F76D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155C012482403100F76D38 /* ViewController.swift */; };
 		FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */; };
 		FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF155C092482403200F76D38 /* Assets.xcassets */; };
 		FF155C0D2482403200F76D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF155C0B2482403200F76D38 /* LaunchScreen.storyboard */; };
@@ -43,7 +42,6 @@
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF155C012482403100F76D38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF155C072482403100F76D38 /* TVShowManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TVShowManager.xcdatamodel; sourceTree = "<group>"; };
 		FF155C092482403200F76D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF155C0C2482403200F76D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				FF1A0B1B24824D5700E406E9 /* AppStart */,
-				FF155C012482403100F76D38 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -375,7 +372,6 @@
 			files = (
 				FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */,
 				FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */,
-				FF155C022482403100F76D38 /* ViewController.swift in Sources */,
 				FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */,
 				FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
