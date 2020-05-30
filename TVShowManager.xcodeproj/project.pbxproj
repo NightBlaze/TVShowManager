@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDEE9C273F68D06EE2B51E92 /* Pods_TVShowManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C022482403100F76D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155C012482403100F76D38 /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29570827196E8DA26C93DF60 /* Pods-TVShowManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManager.release.xcconfig"; path = "Target Support Files/Pods-TVShowManager/Pods-TVShowManager.release.xcconfig"; sourceTree = "<group>"; };
+		2DE3CA32F0725AB4933D1C3B /* Pods-TVShowManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManager.debug.xcconfig"; path = "Target Support Files/Pods-TVShowManager/Pods-TVShowManager.debug.xcconfig"; sourceTree = "<group>"; };
+		EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEE9C273F68D06EE2B51E92 /* Pods_TVShowManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AF707ECEABD127B07792435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB82D7630EF046499C707978 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DE3CA32F0725AB4933D1C3B /* Pods-TVShowManager.debug.xcconfig */,
+				29570827196E8DA26C93DF60 /* Pods-TVShowManager.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF155BF12482403100F76D38 = {
 			isa = PBXGroup;
 			children = (
 				FF155BFC2482403100F76D38 /* TVShowManager */,
 				FF155BFB2482403100F76D38 /* Products */,
+				DB82D7630EF046499C707978 /* Pods */,
+				9AF707ECEABD127B07792435 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF155C112482403200F76D38 /* Build configuration list for PBXNativeTarget "TVShowManager" */;
 			buildPhases = (
+				93262D0CF7435F647876EC8B /* [CP] Check Pods Manifest.lock */,
 				FF155BF62482403100F76D38 /* Sources */,
 				FF155BF72482403100F76D38 /* Frameworks */,
 				FF155BF82482403100F76D38 /* Resources */,
+				F026D6A966443704D116A35C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +218,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93262D0CF7435F647876EC8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TVShowManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F026D6A966443704D116A35C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVShowManager/Pods-TVShowManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVShowManager/Pods-TVShowManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TVShowManager/Pods-TVShowManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF155BF62482403100F76D38 /* Sources */ = {
@@ -342,6 +411,7 @@
 		};
 		FF155C122482403200F76D38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE3CA32F0725AB4933D1C3B /* Pods-TVShowManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +430,7 @@
 		};
 		FF155C132482403200F76D38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29570827196E8DA26C93DF60 /* Pods-TVShowManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
