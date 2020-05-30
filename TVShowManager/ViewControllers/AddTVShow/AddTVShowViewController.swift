@@ -16,7 +16,7 @@ class AddTVShowViewController: UIViewController {
 
     init(interactor: IAddTVShowInteractor) {
         self.interactor = interactor
-        super.init(nibName: AppStartViewController.nameOfClass(), bundle: nil)
+        super.init(nibName: AddTVShowViewController.nameOfClass(), bundle: nil)
     }
 
     required init?(coder: NSCoder) {

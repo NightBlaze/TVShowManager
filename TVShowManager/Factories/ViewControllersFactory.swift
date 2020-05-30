@@ -13,6 +13,7 @@ protocol IViewControllersFactory: IFactory {
     func addTVShowViewController() -> IAddTVShowViewController
     func appStartViewController() -> IAppStartViewController
     func homeViewController() -> IHomeViewController
+    func watchedTVShowViewController() -> IWatchedTVShowViewController
 }
 
 final class ViewControllersFactory: IFactory {
@@ -52,6 +53,15 @@ final class ViewControllersFactory: IFactory {
 
             return viewController
         }
+
+        container.register(IWatchedTVShowViewController.self) { _ in
+            let presenter = WatchedTVShowPresenter()
+            let interactor = WatchedTVShowInteractor(presenter: presenter)
+            let viewController = WatchedTVShowViewController(interactor: interactor)
+            presenter.resolveDependencies(viewController: viewController)
+
+            return viewController
+        }
     }
 }
 
@@ -68,5 +78,9 @@ extension ViewControllersFactory: IViewControllersFactory {
 
     func homeViewController() -> IHomeViewController {
         return container.resolve(IHomeViewController.self)!
+    }
+
+    func watchedTVShowViewController() -> IWatchedTVShowViewController {
+        return container.resolve(IWatchedTVShowViewController.self)!
     }
 }
