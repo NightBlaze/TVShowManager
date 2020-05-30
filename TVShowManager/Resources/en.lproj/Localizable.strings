@@ -12,3 +12,7 @@
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Error initialize application";
 
+// HomeViewController
+"home_view_controller.title" = "TV Show Manager";
+"home_view_controller.add_tv_show_button.title" = "Add new TV show";
+"home_view_controller.show_tv_show_button.title" = "Show watched TV show";

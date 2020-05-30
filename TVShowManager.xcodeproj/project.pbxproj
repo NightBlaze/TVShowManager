@@ -16,6 +16,7 @@
 		FF0722D92482B019005E986C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722D72482B019005E986C /* HomeViewController.xib */; };
 		FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */; };
 		FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */; };
+		FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */; };
@@ -47,6 +48,7 @@
 		FF0722D72482B019005E986C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
 		FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerPresenter.swift; sourceTree = "<group>"; };
+		FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UINavigationController.swift"; sourceTree = "<group>"; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FF0722D32482AF32005E986C /* UIViewController+Routing.swift */,
+				FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
 				FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
+				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
 				FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */,

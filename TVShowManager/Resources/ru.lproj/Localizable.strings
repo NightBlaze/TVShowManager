@@ -11,3 +11,8 @@
 
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Ошибка инициализации приложения";
+
+// HomeViewController
+"home_view_controller.title" = "Менеджер сериалов";
+"home_view_controller.add_tv_show_button.title" = "Добавить сериал";
+"home_view_controller.show_tv_show_button.title" = "Список сериалов";

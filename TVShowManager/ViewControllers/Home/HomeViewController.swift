@@ -12,6 +12,10 @@ protocol IHomeViewController: UIViewController {
 }
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var topImageView: UIImageView!
+    @IBOutlet weak var addTVShowButton: UIButton!
+    @IBOutlet weak var showTVShowButton: UIButton!
+    
     let interactor: IHomeViewControllerInteractor
 
     init(interactor: IHomeViewControllerInteractor) {
@@ -25,6 +29,15 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "home_view_controller.title".localized
+
+        addTVShowButton.setTitle("home_view_controller.add_tv_show_button.title".localized, for: .normal)
+        showTVShowButton.setTitle("home_view_controller.show_tv_show_button.title".localized, for: .normal)
+
+        topImageView.layer.cornerRadius = 16
+        addTVShowButton.layer.cornerRadius = 16
+        showTVShowButton.layer.cornerRadius = 16
     }
 }
 
@@ -32,4 +45,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: IHomeViewController {
 
+}
+
+// MARK: - IBActions
+
+private extension HomeViewController {
+    @IBAction func addTVShowButtonDidPress(_ sender: Any) {
+    }
+
+    @IBAction func showTVShowButtonDidPress(_ sender: Any) {
+    }
 }

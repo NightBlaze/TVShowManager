@@ -52,7 +52,7 @@ extension AppStartViewController: IAppStartViewController {
     }
 
     func goToHomeViewController() {
-        let homeViewController = viewControllersFactory.homeViewController()
+        let homeViewController = viewControllersFactory.homeViewController().encapsulateInNavigationController()
         homeViewController.setAsRootWindow()
     }
 }
