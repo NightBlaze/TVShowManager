@@ -58,16 +58,72 @@
 		FF155BFC2482403100F76D38 /* TVShowManager */ = {
 			isa = PBXGroup;
 			children = (
-				FF155BFD2482403100F76D38 /* AppDelegate.swift */,
-				FF155BFF2482403100F76D38 /* SceneDelegate.swift */,
-				FF155C012482403100F76D38 /* ViewController.swift */,
-				FF155C032482403100F76D38 /* Main.storyboard */,
-				FF155C092482403200F76D38 /* Assets.xcassets */,
-				FF155C0B2482403200F76D38 /* LaunchScreen.storyboard */,
-				FF155C0E2482403200F76D38 /* Info.plist */,
-				FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */,
+				FF6E470824824121001BE330 /* Application */,
+				FF6E470D2482417B001BE330 /* DataLayer */,
+				FF6E470B24824164001BE330 /* Resources */,
+				FF6E470A2482413C001BE330 /* Storyboards */,
+				FF6E470C2482416E001BE330 /* SupportingFiles */,
+				FF6E470924824131001BE330 /* ViewControllers */,
 			);
 			path = TVShowManager;
+			sourceTree = "<group>";
+		};
+		FF6E470824824121001BE330 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FF155BFD2482403100F76D38 /* AppDelegate.swift */,
+				FF155BFF2482403100F76D38 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FF6E470924824131001BE330 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF155C012482403100F76D38 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF6E470A2482413C001BE330 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FF155C032482403100F76D38 /* Main.storyboard */,
+				FF155C0B2482403200F76D38 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FF6E470B24824164001BE330 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF155C092482403200F76D38 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FF6E470C2482416E001BE330 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FF155C0E2482403200F76D38 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FF6E470D2482417B001BE330 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FF6E470E24824195001BE330 /* DataAccessObjects */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		FF6E470E24824195001BE330 /* DataAccessObjects */ = {
+			isa = PBXGroup;
+			children = (
+				FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */,
+			);
+			path = DataAccessObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98W2A74UW7;
-				INFOPLIST_FILE = TVShowManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TVShowManager/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 98W2A74UW7;
-				INFOPLIST_FILE = TVShowManager/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TVShowManager/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
