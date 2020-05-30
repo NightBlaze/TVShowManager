@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol IRouter: IWindowRouter, IHomeRouterScenario {
+protocol IRouter: IAppStartRouterScenario, IHomeRouterScenario {
 }
 
-protocol IWindowRouter {
-    func setRootViewController(viewController: UIViewController, forWindow: UIWindow?)
+protocol IAppStartRouterScenario {
+    func goToHome()
 }
 
 protocol IHomeRouterScenario {
@@ -28,16 +28,12 @@ class Router: IRouter {
     }
 }
 
-// MARK: - IWindowRouter
+// MARK: - IAppStartRouterScenario
 
-extension Router: IWindowRouter {
-    func setRootViewController(viewController: UIViewController, forWindow: UIWindow?) {
-        var window = forWindow
-        if window == nil {
-            window = UIApplication.shared.windows.filter { !$0.isHidden }.first
-        }
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
+extension Router: IAppStartRouterScenario {
+    func goToHome() {
+        let homeViewController = viewControllersFactory.homeViewController().encapsulateInNavigationController()
+        setRootViewController(viewController: homeViewController)
     }
 }
 
@@ -59,6 +55,10 @@ extension Router: IHomeRouterScenario {
 // MARK: - Private
 
 private extension Router {
+    func setRootViewController(viewController: UIViewController, forWindow: UIWindow? = nil) {
+        viewController.setAsRootWindow(for: forWindow)
+    }
+
     func push(viewController: UIViewController,
               from: UIViewController,
               animated: Bool = true) {

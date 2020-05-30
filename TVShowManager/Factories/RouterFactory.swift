@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 
 protocol IRouterFactory: IFactory {
-    func windowRouter() -> IWindowRouter
+    func appStartRouterScenario() -> IAppStartRouterScenario
     func homeRouterScenario() -> IHomeRouterScenario
 }
 
@@ -34,8 +34,8 @@ final class RouterFactory: IFactory {
 // MARK: - IRouterFactory
 
 extension RouterFactory: IRouterFactory {
-    func windowRouter() -> IWindowRouter {
-        return router() as IWindowRouter
+    func appStartRouterScenario() -> IAppStartRouterScenario {
+        return router() as IAppStartRouterScenario
     }
 
     func homeRouterScenario() -> IHomeRouterScenario {

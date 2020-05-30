@@ -17,12 +17,12 @@ class AppStartViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
 
     let interactor: IAppStartViewControllerInteractor
-    let viewControllersFactory: IViewControllersFactory
+    let routerScenario: IAppStartRouterScenario
 
     init(interactor: IAppStartViewControllerInteractor,
-         viewControllersFactory: IViewControllersFactory) {
+         routerScenario: IAppStartRouterScenario) {
         self.interactor = interactor
-        self.viewControllersFactory = viewControllersFactory
+        self.routerScenario = routerScenario
         super.init(nibName: AppStartViewController.nameOfClass(), bundle: nil)
     }
 
@@ -52,7 +52,6 @@ extension AppStartViewController: IAppStartViewController {
     }
 
     func goToHomeViewController() {
-        let homeViewController = viewControllersFactory.homeViewController().encapsulateInNavigationController()
-        homeViewController.setAsRootWindow()
+        routerScenario.goToHome()
     }
 }

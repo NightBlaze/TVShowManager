@@ -11,7 +11,7 @@
 		FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722C62482A183005E986C /* AppStartViewModel.swift */; };
 		FF0722CA2482AC80005E986C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF0722CC2482AC80005E986C /* Localizable.strings */; };
 		FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D02482AD8C005E986C /* String+Localization.swift */; };
-		FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D32482AF32005E986C /* UIViewController+Routing.swift */; };
+		FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D32482AF32005E986C /* UIViewController+Window.swift */; };
 		FF0722D82482B019005E986C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D62482B019005E986C /* HomeViewController.swift */; };
 		FF0722D92482B019005E986C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722D72482B019005E986C /* HomeViewController.xib */; };
 		FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */; };
@@ -53,7 +53,7 @@
 		FF0722CD2482AC96005E986C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF0722CE2482ACA3005E986C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF0722D02482AD8C005E986C /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
-		FF0722D32482AF32005E986C /* UIViewController+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Routing.swift"; sourceTree = "<group>"; };
+		FF0722D32482AF32005E986C /* UIViewController+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Window.swift"; sourceTree = "<group>"; };
 		FF0722D62482B019005E986C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF0722D72482B019005E986C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 		FF0722D22482AF02005E986C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FF0722D32482AF32005E986C /* UIViewController+Routing.swift */,
 				FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */,
+				FF0722D32482AF32005E986C /* UIViewController+Window.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -460,7 +460,7 @@
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
 				FF0722F42482DDEB005E986C /* WatchedTVShowInteractor.swift in Sources */,
 				FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */,
-				FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */,
+				FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
 				FF0722F72482DF57005E986C /* Router.swift in Sources */,
 				FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */,
