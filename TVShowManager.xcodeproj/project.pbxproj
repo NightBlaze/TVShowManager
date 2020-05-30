@@ -25,6 +25,8 @@
 		FF0722F22482DDEB005E986C /* WatchedTVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722EE2482DDEB005E986C /* WatchedTVShowViewController.swift */; };
 		FF0722F32482DDEB005E986C /* WatchedTVShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722EF2482DDEB005E986C /* WatchedTVShowViewController.xib */; };
 		FF0722F42482DDEB005E986C /* WatchedTVShowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722F02482DDEB005E986C /* WatchedTVShowInteractor.swift */; };
+		FF0722F72482DF57005E986C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722F62482DF57005E986C /* Router.swift */; };
+		FF0722F92482E1A7005E986C /* RouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722F82482E1A7005E986C /* RouterFactory.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */; };
@@ -65,6 +67,8 @@
 		FF0722EE2482DDEB005E986C /* WatchedTVShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchedTVShowViewController.swift; sourceTree = "<group>"; };
 		FF0722EF2482DDEB005E986C /* WatchedTVShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchedTVShowViewController.xib; sourceTree = "<group>"; };
 		FF0722F02482DDEB005E986C /* WatchedTVShowInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchedTVShowInteractor.swift; sourceTree = "<group>"; };
+		FF0722F62482DF57005E986C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FF0722F82482E1A7005E986C /* RouterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFactory.swift; sourceTree = "<group>"; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +167,14 @@
 			path = WatchedTVShow;
 			sourceTree = "<group>";
 		};
+		FF0722F52482DF2B005E986C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FF0722F62482DF57005E986C /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FF155BF12482403100F76D38 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +201,7 @@
 				FF1A0B242482502000E406E9 /* Extensions */,
 				FF1A0B152482454100E406E9 /* Factories */,
 				FF6E470B24824164001BE330 /* Resources */,
+				FF0722F52482DF2B005E986C /* Router */,
 				FF6E470A2482413C001BE330 /* Storyboards */,
 				FF6E470C2482416E001BE330 /* SupportingFiles */,
 				FF6E470924824131001BE330 /* ViewControllers */,
@@ -201,6 +214,7 @@
 			children = (
 				FF1A0B322482560700E406E9 /* DataLayerFactory.swift */,
 				FF1A0B162482456700E406E9 /* Factory.swift */,
+				FF0722F82482E1A7005E986C /* RouterFactory.swift */,
 				FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */,
 			);
 			path = Factories;
@@ -448,6 +462,7 @@
 				FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */,
 				FF0722D42482AF32005E986C /* UIViewController+Routing.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
+				FF0722F72482DF57005E986C /* Router.swift in Sources */,
 				FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */,
 				FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
@@ -455,6 +470,7 @@
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
 				FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */,
+				FF0722F92482E1A7005E986C /* RouterFactory.swift in Sources */,
 				FF0722F22482DDEB005E986C /* WatchedTVShowViewController.swift in Sources */,
 				FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */,
 				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,

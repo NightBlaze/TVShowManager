@@ -15,6 +15,7 @@ protocol IFactory {
 
 protocol IMainFactory: IFactory {
     func dataLayerFactory() -> IDataLayerFactory
+    func routerFactory() -> IRouterFactory
     func viewControllersFactory() -> IViewControllersFactory
 }
 
@@ -26,6 +27,10 @@ final class Factory: IFactory {
             DataLayerFactory(container: self.container, mainFactory: self)
         }.inObjectScope(.container)
 
+        container.register(IRouterFactory.self) { [unowned self] _ in
+            RouterFactory(container: self.container, mainFactory: self)
+        }.inObjectScope(.container)
+
         container.register(IViewControllersFactory.self) { [unowned self] _ in
             ViewControllersFactory(container: self.container, mainFactory: self)
         }.inObjectScope(.container)
@@ -35,6 +40,7 @@ final class Factory: IFactory {
 
     private func registerOther() {
         dataLayerFactory().register()
+        routerFactory().register()
         viewControllersFactory().register()
     }
 }
@@ -44,6 +50,10 @@ final class Factory: IFactory {
 extension Factory: IMainFactory {
     func dataLayerFactory() -> IDataLayerFactory {
         return container.resolve(IDataLayerFactory.self)!
+    }
+
+    func routerFactory() -> IRouterFactory {
+        return container.resolve(IRouterFactory.self)!
     }
 
     func viewControllersFactory() -> IViewControllersFactory {
