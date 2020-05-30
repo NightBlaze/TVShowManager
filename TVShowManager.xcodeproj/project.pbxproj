@@ -16,6 +16,11 @@
 		FF155C0D2482403200F76D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF155C0B2482403200F76D38 /* LaunchScreen.storyboard */; };
 		FF1A0B172482456700E406E9 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B162482456700E406E9 /* Factory.swift */; };
 		FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */; };
+		FF1A0B1E24824D8B00E406E9 /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B1C24824D8B00E406E9 /* AppStartViewController.swift */; };
+		FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */; };
+		FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */; };
+		FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */; };
+		FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B252482504200E406E9 /* NSObject+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		FF155C0E2482403200F76D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1A0B162482456700E406E9 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
+		FF1A0B1C24824D8B00E406E9 /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
+		FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppStartViewController.xib; sourceTree = "<group>"; };
+		FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewControllerInteractor.swift; sourceTree = "<group>"; };
+		FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewControllerPresenter.swift; sourceTree = "<group>"; };
+		FF1A0B252482504200E406E9 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 			children = (
 				FF6E470824824121001BE330 /* Application */,
 				FF6E470D2482417B001BE330 /* DataLayer */,
+				FF1A0B242482502000E406E9 /* Extensions */,
 				FF1A0B152482454100E406E9 /* Factories */,
 				FF6E470B24824164001BE330 /* Resources */,
 				FF6E470A2482413C001BE330 /* Storyboards */,
@@ -104,6 +115,25 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		FF1A0B1B24824D5700E406E9 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A0B1C24824D8B00E406E9 /* AppStartViewController.swift */,
+				FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */,
+				FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */,
+				FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		FF1A0B242482502000E406E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A0B252482504200E406E9 /* NSObject+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FF6E470824824121001BE330 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +146,7 @@
 		FF6E470924824131001BE330 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF1A0B1B24824D5700E406E9 /* AppStart */,
 				FF155C012482403100F76D38 /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -222,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF155C0D2482403200F76D38 /* LaunchScreen.storyboard in Resources */,
+				FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */,
 				FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,11 +308,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */,
+				FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */,
 				FF155C022482403100F76D38 /* ViewController.swift in Sources */,
+				FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
+				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
 				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,
 				FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */,
+				FF1A0B1E24824D8B00E406E9 /* AppStartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 
 protocol IViewControllersFactory: IFactory {
-    func appStartViewController() -> UIViewController
+    func appStartViewController() -> IAppStartViewController
 }
 
 final class ViewControllersFactory: IFactory {
@@ -23,8 +23,13 @@ final class ViewControllersFactory: IFactory {
     }
 
     func register() {
-        container.register(UIViewController.self) { _ in
-            ViewController()
+        container.register(IAppStartViewController.self) { _ in
+            let presenter = AppStartViewControllerPresenter()
+            let interactor = AppStartViewControllerInteractor(presenter: presenter)
+            let viewController = AppStartViewController(interactor: interactor)
+            presenter.resolveDependencies(viewController: viewController)
+
+            return viewController
         }
     }
 }
@@ -32,7 +37,7 @@ final class ViewControllersFactory: IFactory {
 // MARK: - IViewControllersFactory
 
 extension ViewControllersFactory: IViewControllersFactory {
-    func appStartViewController() -> UIViewController {
-        return container.resolve(UIViewController.self)!
+    func appStartViewController() -> IAppStartViewController {
+        return container.resolve(IAppStartViewController.self)!
     }
 }
