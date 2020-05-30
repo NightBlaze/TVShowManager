@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let startViewController = factory.viewControllersFactory().appStartViewController()
-        startViewController.view.backgroundColor = .green
         window.rootViewController = startViewController
 
         self.window = window
