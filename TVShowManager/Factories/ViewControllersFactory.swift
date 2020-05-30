@@ -23,9 +23,10 @@ final class ViewControllersFactory: IFactory {
     }
 
     func register() {
-        container.register(IAppStartViewController.self) { _ in
+        container.register(IAppStartViewController.self) { [unowned self] _ in
             let presenter = AppStartViewControllerPresenter()
-            let interactor = AppStartViewControllerInteractor(presenter: presenter)
+            let lps = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
+            let interactor = AppStartViewControllerInteractor(presenter: presenter, localPersistentStore: lps)
             let viewController = AppStartViewController(interactor: interactor)
             presenter.resolveDependencies(viewController: viewController)
 
