@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EDEE9C273F68D06EE2B51E92 /* Pods_TVShowManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */; };
 		FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722C62482A183005E986C /* AppStartViewModel.swift */; };
+		FF0722CA2482AC80005E986C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF0722CC2482AC80005E986C /* Localizable.strings */; };
+		FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D02482AD8C005E986C /* String+Localization.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C022482403100F76D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155C012482403100F76D38 /* ViewController.swift */; };
@@ -32,6 +34,10 @@
 		2DE3CA32F0725AB4933D1C3B /* Pods-TVShowManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManager.debug.xcconfig"; path = "Target Support Files/Pods-TVShowManager/Pods-TVShowManager.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0722C62482A183005E986C /* AppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewModel.swift; sourceTree = "<group>"; };
+		FF0722CB2482AC80005E986C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF0722CD2482AC96005E986C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF0722CE2482ACA3005E986C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FF0722D02482AD8C005E986C /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,14 @@
 				29570827196E8DA26C93DF60 /* Pods-TVShowManager.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF0722CF2482AD73005E986C /* String */ = {
+			isa = PBXGroup;
+			children = (
+				FF0722D02482AD8C005E986C /* String+Localization.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		FF155BF12482403100F76D38 = {
@@ -141,6 +155,7 @@
 			children = (
 				FF1A0B2C248252E800E406E9 /* FileManager */,
 				FF1A0B2A248252B200E406E9 /* NSObject */,
+				FF0722CF2482AD73005E986C /* String */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				FF155C092482403200F76D38 /* Assets.xcassets */,
+				FF0722CC2482AC80005E986C /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -272,6 +288,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				de,
 			);
 			mainGroup = FF155BF12482403100F76D38;
 			productRefGroup = FF155BFB2482403100F76D38 /* Products */;
@@ -289,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF155C0D2482403200F76D38 /* LaunchScreen.storyboard in Resources */,
+				FF0722CA2482AC80005E986C /* Localizable.strings in Resources */,
 				FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */,
 				FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */,
 			);
@@ -352,6 +371,7 @@
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,
 				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
+				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
 				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,
@@ -363,6 +383,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FF0722CC2482AC80005E986C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF0722CB2482AC80005E986C /* en */,
+				FF0722CD2482AC96005E986C /* ru */,
+				FF0722CE2482ACA3005E986C /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FF155C0B2482403200F76D38 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -378,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -438,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

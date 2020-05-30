@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TVShowManager
+
+  Created by Alexander Timonenkov on 30.05.2020.
+  Copyright © 2020 ATi Soft. All rights reserved.
+*/
+
+"ok" = "OK";
+"cancel" = "Stornieren";
+
+// AppStartViewController
+"app_start_view_controller.app_initialization.error" = "Fehler beim Initialisieren der Anwendung";

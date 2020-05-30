@@ -29,7 +29,7 @@ extension AppStartViewControllerPresenter: IAppStartViewControllerPresenter {
     }
 
     func initializationFailed() {
-        let viewModel = AppStartViewModel(errorMessage: "Error initialize application")
+        let viewModel = AppStartViewModel(errorMessage: "app_start_view_controller.app_initialization.error".localized)
         viewController?.showError(viewModel: viewModel)
     }
 }
