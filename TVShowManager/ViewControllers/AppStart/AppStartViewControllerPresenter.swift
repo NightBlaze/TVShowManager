@@ -9,6 +9,8 @@
 import Foundation
 
 protocol IAppStartViewControllerPresenter {
+    func initializationSuccessed()
+    func initializationFailed()
 }
 
 final class AppStartViewControllerPresenter {
@@ -22,4 +24,12 @@ final class AppStartViewControllerPresenter {
 // MARK: - IAppStartViewControllerPresenter
 
 extension AppStartViewControllerPresenter: IAppStartViewControllerPresenter {
+    func initializationSuccessed() {
+        viewController?.goToHomeViewController()
+    }
+
+    func initializationFailed() {
+        let viewModel = AppStartViewModel(errorMessage: "Error initialize application")
+        viewController?.showError(viewModel: viewModel)
+    }
 }

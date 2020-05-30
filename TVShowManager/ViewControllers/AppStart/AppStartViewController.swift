@@ -9,9 +9,13 @@
 import UIKit
 
 protocol IAppStartViewController: UIViewController {
+    func showError(viewModel: AppStartViewModel)
+    func goToHomeViewController()
 }
 
 class AppStartViewController: UIViewController {
+    @IBOutlet weak var infoLabel: UILabel!
+
     let interactor: IAppStartViewControllerInteractor
 
     init(interactor: IAppStartViewControllerInteractor) {
@@ -21,6 +25,12 @@ class AppStartViewController: UIViewController {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        infoLabel.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -33,4 +43,12 @@ class AppStartViewController: UIViewController {
 // MARK: - IAppStartViewController
 
 extension AppStartViewController: IAppStartViewController {
+    func showError(viewModel: AppStartViewModel) {
+        infoLabel.text = viewModel.errorMessage
+        infoLabel.isHidden = false
+    }
+
+    func goToHomeViewController() {
+        print("Go To Home View Controller")
+    }
 }

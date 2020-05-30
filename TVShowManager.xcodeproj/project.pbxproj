@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EDEE9C273F68D06EE2B51E92 /* Pods_TVShowManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */; };
+		FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722C62482A183005E986C /* AppStartViewModel.swift */; };
 		FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFD2482403100F76D38 /* AppDelegate.swift */; };
 		FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155BFF2482403100F76D38 /* SceneDelegate.swift */; };
 		FF155C022482403100F76D38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF155C012482403100F76D38 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		29570827196E8DA26C93DF60 /* Pods-TVShowManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManager.release.xcconfig"; path = "Target Support Files/Pods-TVShowManager/Pods-TVShowManager.release.xcconfig"; sourceTree = "<group>"; };
 		2DE3CA32F0725AB4933D1C3B /* Pods-TVShowManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManager.debug.xcconfig"; path = "Target Support Files/Pods-TVShowManager/Pods-TVShowManager.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDB285A762254D2EBB338C8 /* Pods_TVShowManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0722C62482A183005E986C /* AppStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewModel.swift; sourceTree = "<group>"; };
 		FF155BFA2482403100F76D38 /* TVShowManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVShowManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF155BFD2482403100F76D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF155BFF2482403100F76D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */,
 				FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */,
 				FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */,
+				FF0722C62482A183005E986C /* AppStartViewModel.swift */,
 			);
 			path = AppStart;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */,
 				FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */,
 				FF155C022482403100F76D38 /* ViewController.swift in Sources */,
+				FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */,
 				FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,

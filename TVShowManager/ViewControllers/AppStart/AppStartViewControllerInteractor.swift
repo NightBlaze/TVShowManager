@@ -27,8 +27,13 @@ final class AppStartViewControllerInteractor {
 
 extension AppStartViewControllerInteractor: IAppStartViewControllerInteractor {
     func initializeApplication() {
-        lps.initializeLPS { result in
-            print(result)
+        lps.initializeLPS { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.presenter.initializationSuccessed()
+            case .failure(_):
+                self?.presenter.initializationFailed()
+            }
         }
     }
 }
