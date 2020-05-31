@@ -14,7 +14,7 @@ protocol IAppStartPresenter {
 }
 
 final class AppStartPresenter {
-    weak var viewController: IAppStartViewController?
+    private weak var viewController: IAppStartViewController?
 
     func resolveDependencies(viewController: IAppStartViewController) {
         self.viewController = viewController

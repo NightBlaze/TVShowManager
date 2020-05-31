@@ -11,8 +11,8 @@ import Foundation
 protocol IAddTVShowInteractor {
 }
 
-class AddTVShowInteractor {
-    let presenter: IAddTVShowPresenter
+final class AddTVShowInteractor {
+    private let presenter: IAddTVShowPresenter
 
     init(presenter: IAddTVShowPresenter) {
         self.presenter = presenter

@@ -11,8 +11,8 @@ import Foundation
 protocol IHomePresenter {
 }
 
-class HomePresenter {
-    weak var viewController: IHomeViewController?
+final class HomePresenter {
+    private weak var viewController: IHomeViewController?
 
     func resolveDependencies(viewController: IHomeViewController) {
         self.viewController = viewController

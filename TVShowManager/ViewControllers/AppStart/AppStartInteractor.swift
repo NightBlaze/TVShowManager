@@ -13,8 +13,8 @@ protocol IAppStartInteractor {
 }
 
 final class AppStartInteractor {
-    let presenter: IAppStartPresenter
-    let lps: ILocalPersistentStoreInitializer
+    private let presenter: IAppStartPresenter
+    private let lps: ILocalPersistentStoreInitializer
 
     init(presenter: IAppStartPresenter,
          localPersistentStore: ILocalPersistentStoreInitializer) {

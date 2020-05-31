@@ -20,8 +20,8 @@ protocol IHomeRouterScenario {
     func goToWatchedTVShow(from: UIViewController)
 }
 
-class Router: IRouter {
-    let viewControllersFactory: IViewControllersFactory
+final class Router: IRouter {
+    private let viewControllersFactory: IViewControllersFactory
 
     init(viewControllersFactory: IViewControllersFactory) {
         self.viewControllersFactory = viewControllersFactory

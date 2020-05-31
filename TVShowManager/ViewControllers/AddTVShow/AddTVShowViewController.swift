@@ -11,13 +11,13 @@ import UIKit
 protocol IAddTVShowViewController: UIViewController {
 }
 
-class AddTVShowViewController: UIViewController {
+final class AddTVShowViewController: UIViewController {
     @IBOutlet weak var titleLabel: UITextField!
     @IBOutlet weak var yearLabel: UITextField!
     @IBOutlet weak var seasonsNumber: UITextField!
     @IBOutlet weak var saveButton: ActionButton!
 
-    let interactor: IAddTVShowInteractor
+    private let interactor: IAddTVShowInteractor
 
     init(interactor: IAddTVShowInteractor) {
         self.interactor = interactor

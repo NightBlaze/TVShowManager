@@ -11,8 +11,8 @@ import Foundation
 protocol IWatchedTVShowPresenter {
 }
 
-class WatchedTVShowPresenter {
-    weak var viewController: IWatchedTVShowViewController?
+final class WatchedTVShowPresenter {
+    private weak var viewController: IWatchedTVShowViewController?
 
     func resolveDependencies(viewController: IWatchedTVShowViewController) {
         self.viewController = viewController

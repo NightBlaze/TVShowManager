@@ -11,12 +11,12 @@ import UIKit
 protocol IHomeViewController: UIViewController {
 }
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     @IBOutlet weak var topImageView: UIImageView!
     @IBOutlet weak var addTVShowButton: ActionButton!
     @IBOutlet weak var showTVShowButton: ActionButton!
     
-    let interactor: IHomeInteractor
+    private let interactor: IHomeInteractor
 
     init(interactor: IHomeInteractor) {
         self.interactor = interactor

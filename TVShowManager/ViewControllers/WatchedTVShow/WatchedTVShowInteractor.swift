@@ -11,8 +11,8 @@ import Foundation
 protocol IWatchedTVShowInteractor {
 }
 
-class WatchedTVShowInteractor {
-    let presenter: IWatchedTVShowPresenter
+final class WatchedTVShowInteractor {
+    private let presenter: IWatchedTVShowPresenter
 
     init(presenter: IWatchedTVShowPresenter) {
         self.presenter = presenter

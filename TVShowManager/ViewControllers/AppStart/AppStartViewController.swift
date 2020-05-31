@@ -13,11 +13,11 @@ protocol IAppStartViewController: UIViewController {
     func goToHomeViewController()
 }
 
-class AppStartViewController: UIViewController {
+final class AppStartViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
 
-    let interactor: IAppStartInteractor
-    let routerScenario: IAppStartRouterScenario
+    private let interactor: IAppStartInteractor
+    private let routerScenario: IAppStartRouterScenario
 
     init(interactor: IAppStartInteractor,
          routerScenario: IAppStartRouterScenario) {

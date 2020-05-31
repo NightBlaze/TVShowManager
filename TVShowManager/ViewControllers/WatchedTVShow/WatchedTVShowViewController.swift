@@ -11,8 +11,8 @@ import UIKit
 protocol IWatchedTVShowViewController: UIViewController {
 }
 
-class WatchedTVShowViewController: UIViewController {
-    let interactor: IWatchedTVShowInteractor
+final class WatchedTVShowViewController: UIViewController {
+    private let interactor: IWatchedTVShowInteractor
 
     init(interactor: IWatchedTVShowInteractor) {
         self.interactor = interactor

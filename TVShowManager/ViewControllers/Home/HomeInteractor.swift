@@ -11,8 +11,8 @@ import Foundation
 protocol IHomeInteractor {
 }
 
-class HomeInteractor {
-    let presenter: IHomePresenter
+final class HomeInteractor {
+    private let presenter: IHomePresenter
 
     init(presenter: IHomePresenter) {
         self.presenter = presenter
