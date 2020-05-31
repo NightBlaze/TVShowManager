@@ -17,10 +17,11 @@ extension TVShowDAO {
         return NSFetchRequest<TVShowDAO>(entityName: "TVShowDAO")
     }
 
+    @NSManaged public var createdDate: Date?
+    @NSManaged public var id: UUID?
+    @NSManaged public var seasons: Int32
     @NSManaged public var title: String?
     @NSManaged public var year: Int32
-    @NSManaged public var seasons: Int32
-    @NSManaged public var id: UUID?
-    @NSManaged public var createdDate: Date?
+    @NSManaged public var externalId: String?
 
 }

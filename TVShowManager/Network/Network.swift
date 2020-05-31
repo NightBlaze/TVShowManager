@@ -17,7 +17,7 @@ protocol INetworkInitializer {
 }
 
 protocol INetworkData {
-    func save(dto: SaveTVShowDTO, completion: @escaping (Result<Bool, Error>) -> Void)
+    func save(dto: SaveTVShowDTO, completion: @escaping (Result<String, Error>) -> Void)
 }
 
 final class Network: INetwork {
@@ -29,6 +29,7 @@ final class Network: INetwork {
 extension Network: INetworkInitializer {
     enum Errors: Error {
         case saveTVShowNotSuccess
+        case objectIdIsNil
     }
 
     private static var applicationId: String { "UvBvjdPeATFfYW9PeMjuoyX0ZGkD9XVY6NJAwshV" }
@@ -48,14 +49,17 @@ extension Network: INetworkInitializer {
 // MARK: - INetworkData
 
 extension Network: INetworkData {
-    func save(dto: SaveTVShowDTO, completion: @escaping (Result<Bool, Error>) -> Void) {
-        dto.pfObject.saveInBackground { (successed, error) in
+    func save(dto: SaveTVShowDTO, completion: @escaping (Result<String, Error>) -> Void) {
+        let objectToSave = dto.pfObject
+        objectToSave.saveInBackground { (successed, error) in
             if let error = error {
                 completion(.failure(error))
             } else if !successed {
                 completion(.failure(Errors.saveTVShowNotSuccess))
+            } else if let objectId = objectToSave.objectId{
+                completion(.success(objectId))
             } else {
-                completion(.success(true))
+                completion(.failure(Errors.objectIdIsNil))
             }
         }
     }

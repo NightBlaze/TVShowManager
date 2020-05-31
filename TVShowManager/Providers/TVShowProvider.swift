@@ -56,14 +56,18 @@ final class TVShowProvider: NSObject, ITVShowProvider {
 extension TVShowProvider: ITVShowProviderCreator {
     func createTVShow(title: String, year: Int, seasons: Int, completion: @escaping (Result<TVShowDAO, Error>) -> Void) {
         let tvShow = createTVShowInLPS(title: title, year: year, seasons: seasons)
-        saveOnRemoteServer(tvShow: tvShow) { _ in
-            // Ignore result of saving TV show on remote server
+        saveOnRemoteServer(tvShow: tvShow) { [weak self] result in
+            // Ignore error result of saving TV show on remote server
             // because this behaviour is business-logic related,
             // e.g. we can remove the TV show locally, apply retry policy
             // or just show alert. Also handle error situation here
             // is out of scope this case study
-            //
-            // So just tell that creating and saving of TV show is success
+
+            if case .success(let externalId) = result {
+                tvShow.externalId = externalId
+                self?.lps.save()
+            }
+
             completion(.success(tvShow))
         }
     }
@@ -128,7 +132,7 @@ private extension TVShowProvider {
         return tvShow
     }
 
-    func saveOnRemoteServer(tvShow: TVShowDAO, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func saveOnRemoteServer(tvShow: TVShowDAO, completion: @escaping (Result<String, Error>) -> Void) {
         let dto = SaveTVShowDTO(dao: tvShow)
         network.save(dto: dto, completion: completion)
     }
