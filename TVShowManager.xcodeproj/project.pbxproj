@@ -46,6 +46,8 @@
 		FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */; };
 		FF3313372483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313352483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift */; };
 		FF3313382483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */; };
+		FF33133B2483A91500C64F6D /* TVShowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33133A2483A91500C64F6D /* TVShowProvider.swift */; };
+		FF33133D2483AA1F00C64F6D /* ProvidersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 		FF3313352483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDAO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDAO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FF33133A2483A91500C64F6D /* TVShowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowProvider.swift; sourceTree = "<group>"; };
+		FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				FF6E470D2482417B001BE330 /* DataLayer */,
 				FF1A0B242482502000E406E9 /* Extensions */,
 				FF1A0B152482454100E406E9 /* Factories */,
+				FF3313392483A8F600C64F6D /* Providers */,
 				FF6E470B24824164001BE330 /* Resources */,
 				FF0722F52482DF2B005E986C /* Router */,
 				FF6E470A2482413C001BE330 /* Storyboards */,
@@ -223,6 +228,7 @@
 			children = (
 				FF1A0B322482560700E406E9 /* DataLayerFactory.swift */,
 				FF1A0B162482456700E406E9 /* Factory.swift */,
+				FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */,
 				FF0722F82482E1A7005E986C /* RouterFactory.swift */,
 				FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */,
 			);
@@ -299,6 +305,14 @@
 				FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */,
 			);
 			path = CALayer;
+			sourceTree = "<group>";
+		};
+		FF3313392483A8F600C64F6D /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				FF33133A2483A91500C64F6D /* TVShowProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		FF6E470824824121001BE330 /* Application */ = {
@@ -491,12 +505,14 @@
 				FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */,
 				FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */,
 				FF1A0B2124824DBD00E406E9 /* AppStartInteractor.swift in Sources */,
+				FF33133B2483A91500C64F6D /* TVShowProvider.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,
 				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
 				FF0722F42482DDEB005E986C /* WatchedTVShowInteractor.swift in Sources */,
 				FF3313382483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift in Sources */,
+				FF33133D2483AA1F00C64F6D /* ProvidersFactory.swift in Sources */,
 				FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */,
 				FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
