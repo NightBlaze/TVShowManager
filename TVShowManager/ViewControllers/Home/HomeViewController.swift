@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
         addTVShowButton.setTitle("home_view_controller.add_tv_show_button.title".localized, for: .normal)
         showTVShowButton.setTitle("home_view_controller.show_tv_show_button.title".localized, for: .normal)
 
-        topImageView.layer.cornerRadius = 16
+        topImageView.layer.applyDefaultCornerRadius()
     }
 }
 
