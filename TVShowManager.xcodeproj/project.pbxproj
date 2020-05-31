@@ -42,6 +42,8 @@
 		FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B282482513B00E406E9 /* LocalPersistentStore.swift */; };
 		FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2D2482530200E406E9 /* FileManager+URLs.swift */; };
 		FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B322482560700E406E9 /* DataLayerFactory.swift */; };
+		FF1A4C68248386A0006D4B23 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4C67248386A0006D4B23 /* ActionButton.swift */; };
+		FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		FF1A0B282482513B00E406E9 /* LocalPersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPersistentStore.swift; sourceTree = "<group>"; };
 		FF1A0B2D2482530200E406E9 /* FileManager+URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+URLs.swift"; sourceTree = "<group>"; };
 		FF1A0B322482560700E406E9 /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
+		FF1A4C67248386A0006D4B23 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				FF6E470824824121001BE330 /* Application */,
+				FF1A4C6424838668006D4B23 /* Components */,
 				FF6E470D2482417B001BE330 /* DataLayer */,
 				FF1A0B242482502000E406E9 /* Extensions */,
 				FF1A0B152482454100E406E9 /* Factories */,
@@ -235,6 +240,7 @@
 		FF1A0B242482502000E406E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FF1A4C6924838764006D4B23 /* CALayer */,
 				FF1A0B2C248252E800E406E9 /* FileManager */,
 				FF1A0B2A248252B200E406E9 /* NSObject */,
 				FF0722CF2482AD73005E986C /* String */,
@@ -265,6 +271,30 @@
 				FF1A0B2D2482530200E406E9 /* FileManager+URLs.swift */,
 			);
 			path = FileManager;
+			sourceTree = "<group>";
+		};
+		FF1A4C6424838668006D4B23 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A4C662483868B006D4B23 /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FF1A4C662483868B006D4B23 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A4C67248386A0006D4B23 /* ActionButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		FF1A4C6924838764006D4B23 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */,
+			);
+			path = CALayer;
 			sourceTree = "<group>";
 		};
 		FF6E470824824121001BE330 /* Application */ = {
@@ -453,6 +483,7 @@
 				FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */,
 				FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */,
 				FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */,
+				FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */,
 				FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,
@@ -477,6 +508,7 @@
 				FF0722F12482DDEB005E986C /* WatchedTVShowPresenter.swift in Sources */,
 				FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */,
 				FF1A0B1E24824D8B00E406E9 /* AppStartViewController.swift in Sources */,
+				FF1A4C68248386A0006D4B23 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

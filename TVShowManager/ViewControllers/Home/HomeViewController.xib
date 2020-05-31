@@ -27,12 +27,11 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-Im-8Bd">
-                    <rect key="frame" x="109" y="252" width="196" height="84"/>
+                    <rect key="frame" x="125" y="252" width="164" height="76"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQv-Ou-mz6">
-                            <rect key="frame" x="0.0" y="0.0" width="196" height="34"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQv-Ou-mz6" customClass="ActionButton" customModule="TVShowManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="164" height="30"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                             <state key="normal" title="Add new TV show">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -40,10 +39,9 @@
                                 <action selector="addTVShowButtonDidPress:" destination="-1" eventType="touchUpInside" id="zFa-6Y-TUU"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-sZ-nbD">
-                            <rect key="frame" x="0.0" y="50" width="196" height="34"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGi-sZ-nbD" customClass="ActionButton" customModule="TVShowManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="46" width="164" height="30"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                             <state key="normal" title="Show watched TV show">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>

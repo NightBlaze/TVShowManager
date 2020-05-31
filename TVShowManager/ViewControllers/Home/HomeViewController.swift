@@ -13,8 +13,8 @@ protocol IHomeViewController: UIViewController {
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var topImageView: UIImageView!
-    @IBOutlet weak var addTVShowButton: UIButton!
-    @IBOutlet weak var showTVShowButton: UIButton!
+    @IBOutlet weak var addTVShowButton: ActionButton!
+    @IBOutlet weak var showTVShowButton: ActionButton!
     
     let interactor: IHomeViewControllerInteractor
 
@@ -36,8 +36,6 @@ class HomeViewController: UIViewController {
         showTVShowButton.setTitle("home_view_controller.show_tv_show_button.title".localized, for: .normal)
 
         topImageView.layer.cornerRadius = 16
-        addTVShowButton.layer.cornerRadius = 16
-        showTVShowButton.layer.cornerRadius = 16
     }
 }
 

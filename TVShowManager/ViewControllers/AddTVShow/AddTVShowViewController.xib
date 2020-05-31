@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="ZgM-ot-2pp">
-                    <rect key="frame" x="16" y="60" width="382" height="175"/>
+                    <rect key="frame" x="16" y="60" width="382" height="171"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-cT-gGM">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -39,10 +39,9 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7f-sS-HkM">
-                            <rect key="frame" x="0.0" y="141" width="382" height="34"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7f-sS-HkM" customClass="ActionButton" customModule="TVShowManager" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="141" width="382" height="30"/>
                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                             <state key="normal" title="Save">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
