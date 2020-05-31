@@ -18,6 +18,7 @@ protocol IAppStartRouterScenario {
 protocol IHomeRouterScenario {
     func goToAddTVShow(from: UIViewController)
     func goToWatchedTVShow(from: UIViewController)
+    func goToHome(from: UIViewController)
 }
 
 final class Router: IRouter {
@@ -42,13 +43,16 @@ extension Router: IAppStartRouterScenario {
 extension Router: IHomeRouterScenario {
     func goToAddTVShow(from: UIViewController) {
         let viewController = viewControllersFactory.addTVShowViewController()
-        from.navigationController?.pushViewController(viewController, animated: true)
         push(viewController: viewController, from: from)
     }
 
     func goToWatchedTVShow(from: UIViewController) {
         let viewController = viewControllersFactory.watchedTVShowViewController()
         push(viewController: viewController, from: from)
+    }
+
+    func goToHome(from: UIViewController) {
+        from.navigationController?.popViewController(animated: true)
     }
 }
 

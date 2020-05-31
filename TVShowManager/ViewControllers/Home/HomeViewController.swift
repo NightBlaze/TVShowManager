@@ -17,9 +17,12 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var showTVShowButton: ActionButton!
     
     private let interactor: IHomeInteractor
+    private let routerScenario: IHomeRouterScenario
 
-    init(interactor: IHomeInteractor) {
+    init(interactor: IHomeInteractor,
+         router: IHomeRouterScenario) {
         self.interactor = interactor
+        routerScenario = router
         super.init(nibName: HomeViewController.nameOfClass(), bundle: nil)
     }
 
@@ -49,6 +52,7 @@ extension HomeViewController: IHomeViewController {
 
 private extension HomeViewController {
     @IBAction func addTVShowButtonDidPress(_ sender: Any) {
+        routerScenario.goToAddTVShow(from: self)
     }
 
     @IBAction func showTVShowButtonDidPress(_ sender: Any) {

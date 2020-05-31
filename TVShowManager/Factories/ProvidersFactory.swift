@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 
 protocol IProvidersFactory: IFactory {
-    func tvShowProviderCreater() -> ITVShowProviderCreator
+    func tvShowProviderCreator() -> ITVShowProviderCreator
 }
 
 final class ProvidersFactory: IFactory {
@@ -33,7 +33,7 @@ final class ProvidersFactory: IFactory {
 // MARK: - IProvidersFactory
 
 extension ProvidersFactory: IProvidersFactory {
-    func tvShowProviderCreater() -> ITVShowProviderCreator {
+    func tvShowProviderCreator() -> ITVShowProviderCreator {
         return tvShowProvider() as ITVShowProviderCreator
     }
 }

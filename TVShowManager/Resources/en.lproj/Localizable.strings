@@ -9,6 +9,15 @@
 "ok" = "OK";
 "cancel" = "Cancel";
 
+// AddTVShowViewController
+"add_tv_show_view_controller.title" = "Add TV Show";
+"add_tv_show_view_controller.add_tv_show.error_title" = "Warning";
+"add_tv_show_view_controller.add_tv_show.error_message" = "Error add TV Show. Please try again later";
+"add_tv_show_view_controller.title_textfield.placeholder" = "Title";
+"add_tv_show_view_controller.year_textfield.placeholder" = "Year of release";
+"add_tv_show_view_controller.seasons_textfield.placeholder" = "Number of seasons";
+"add_tv_show_view_controller.save_button.title" = "Save";
+
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Error initialize application";
 

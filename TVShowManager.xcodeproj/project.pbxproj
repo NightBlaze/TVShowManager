@@ -48,6 +48,8 @@
 		FF3313382483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */; };
 		FF33133B2483A91500C64F6D /* TVShowProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33133A2483A91500C64F6D /* TVShowProvider.swift */; };
 		FF33133D2483AA1F00C64F6D /* ProvidersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */; };
+		FF3313412483AE1500C64F6D /* TVShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313402483AE1500C64F6D /* TVShowViewModel.swift */; };
+		FF3313442483C3D900C64F6D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313432483C3D900C64F6D /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDAO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FF33133A2483A91500C64F6D /* TVShowProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowProvider.swift; sourceTree = "<group>"; };
 		FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersFactory.swift; sourceTree = "<group>"; };
+		FF3313402483AE1500C64F6D /* TVShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewModel.swift; sourceTree = "<group>"; };
+		FF3313432483C3D900C64F6D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			children = (
 				FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */,
 				FF0722D32482AF32005E986C /* UIViewController+Window.swift */,
+				FF3313432483C3D900C64F6D /* UIViewController+Alert.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				FF0722EA2482DC22005E986C /* AddTVShowPresenter.swift */,
 				FF0722E42482DBE9005E986C /* AddTVShowViewController.swift */,
 				FF0722E52482DBE9005E986C /* AddTVShowViewController.xib */,
+				FF3313402483AE1500C64F6D /* TVShowViewModel.swift */,
 			);
 			path = AddTVShow;
 			sourceTree = "<group>";
@@ -520,11 +526,13 @@
 				FF0722DD2482B03D005E986C /* HomePresenter.swift in Sources */,
 				FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
+				FF3313442483C3D900C64F6D /* UIViewController+Alert.swift in Sources */,
 				FF3313372483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift in Sources */,
 				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
 				FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */,
+				FF3313412483AE1500C64F6D /* TVShowViewModel.swift in Sources */,
 				FF0722F92482E1A7005E986C /* RouterFactory.swift in Sources */,
 				FF0722F22482DDEB005E986C /* WatchedTVShowViewController.swift in Sources */,
 				FF0722DB2482B02C005E986C /* HomeInteractor.swift in Sources */,

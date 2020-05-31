@@ -26,10 +26,12 @@ final class ViewControllersFactory: IFactory {
     }
 
     func register() {
-        container.register(IAddTVShowViewController.self) { _ in
+        container.register(IAddTVShowViewController.self) { [unowned self] _ in
             let presenter = AddTVShowPresenter()
-            let interactor = AddTVShowInteractor(presenter: presenter)
-            let viewController = AddTVShowViewController(interactor: interactor)
+            let provider = self.mainFactory.providersFactory().tvShowProviderCreator()
+            let interactor = AddTVShowInteractor(presenter: presenter, tvShowProvider: provider)
+            let routerScenario = self.mainFactory.routerFactory().homeRouterScenario()
+            let viewController = AddTVShowViewController(interactor: interactor, router: routerScenario)
             presenter.resolveDependencies(viewController: viewController)
 
             return viewController
@@ -49,7 +51,8 @@ final class ViewControllersFactory: IFactory {
         container.register(IHomeViewController.self) { _ in
             let presenter = HomePresenter()
             let interactor = HomeInteractor(presenter: presenter)
-            let viewController = HomeViewController(interactor: interactor)
+            let routerScenario = self.mainFactory.routerFactory().homeRouterScenario()
+            let viewController = HomeViewController(interactor: interactor, router: routerScenario)
             presenter.resolveDependencies(viewController: viewController)
 
             return viewController

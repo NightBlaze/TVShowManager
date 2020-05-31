@@ -9,6 +9,15 @@
 "ok" = "OK";
 "cancel" = "Stornieren";
 
+// AddTVShowViewController
+"add_tv_show_view_controller.title" = "TV-Show hinzufügen";
+"add_tv_show_view_controller.add_tv_show.error_title" = "Warnung";
+"add_tv_show_view_controller.add_tv_show.error_message" = "Fehler beim Hinzufügen der TV-Show. Bitte versuchen Sie es später noch einmal";
+"add_tv_show_view_controller.title_textfield.placeholder" = "Titel";
+"add_tv_show_view_controller.year_textfield.placeholder" = "Jahr der Veröffentlichung";
+"add_tv_show_view_controller.seasons_textfield.placeholder" = "Anzahl der Jahreszeiten";
+"add_tv_show_view_controller.save_button.title" = "Speichern";
+
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Fehler beim Initialisieren der Anwendung";
 

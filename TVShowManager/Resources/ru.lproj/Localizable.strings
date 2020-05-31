@@ -9,6 +9,15 @@
 "ok" = "ОК";
 "cancel" = "Отмена";
 
+// AddTVShowViewController
+"add_tv_show_view_controller.title" = "Добавить сериал";
+"add_tv_show_view_controller.add_tv_show.error_title" = "Внимание";
+"add_tv_show_view_controller.add_tv_show.error_message" = "Ошибка при добавлении сериала. Пожалуйста, повторите позже";
+"add_tv_show_view_controller.title_textfield.placeholder" = "Название";
+"add_tv_show_view_controller.year_textfield.placeholder" = "Год выпуска";
+"add_tv_show_view_controller.seasons_textfield.placeholder" = "Количество сезонов";
+"add_tv_show_view_controller.save_button.title" = "Сохранить";
+
 // AppStartViewController
 "app_start_view_controller.app_initialization.error" = "Ошибка инициализации приложения";
 

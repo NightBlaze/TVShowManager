@@ -9,6 +9,8 @@
 import Foundation
 
 protocol IAddTVShowPresenter {
+    func addTVShowSuccessed()
+    func addTVShowFailed()
 }
 
 final class AddTVShowPresenter {
@@ -22,4 +24,13 @@ final class AddTVShowPresenter {
 // MARK: - IAddTVShowPresenter
 
 extension AddTVShowPresenter: IAddTVShowPresenter {
+    func addTVShowSuccessed() {
+        viewController?.goBack()
+    }
+
+    func addTVShowFailed() {
+        let viewModel = TVShowViewModel(errorTitle: "add_tv_show_view_controller.add_tv_show.error_title".localized,
+                                        errorMessage: "add_tv_show_view_controller.add_tv_show.error_message".localized)
+        viewController?.showError(viewModel: viewModel)
+    }
 }

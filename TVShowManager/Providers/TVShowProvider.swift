@@ -12,7 +12,7 @@ protocol ITVShowProvider: ITVShowProviderCreator {
 }
 
 protocol ITVShowProviderCreator {
-    func createTVShow(title: String, year: Int, seasons: Int) -> TVShowDAO
+    func createTVShow(title: String, year: Int, seasons: Int, completion: @escaping (Result<TVShowDAO, Error>) -> Void)
 }
 
 final class TVShowProvider: ITVShowProvider {
@@ -26,10 +26,10 @@ final class TVShowProvider: ITVShowProvider {
 // MARK: - ITVShowProviderCreator
 
 extension TVShowProvider: ITVShowProviderCreator {
-    @discardableResult
-    func createTVShow(title: String, year: Int, seasons: Int) -> TVShowDAO {
+    func createTVShow(title: String, year: Int, seasons: Int, completion: @escaping (Result<TVShowDAO, Error>) -> Void) {
         let tvShow = TVShowDAO.create(title: title, year: Int32(year), seasons: Int32(seasons), context: lps.backgroundContext)
         lps.save()
-        return tvShow
+        // TODO: save to server
+        completion(.success(tvShow))
     }
 }
