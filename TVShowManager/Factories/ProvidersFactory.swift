@@ -26,7 +26,7 @@ final class ProvidersFactory: IFactory {
         container.register(ITVShowProvider.self) { [unowned self] _ in
             let lps = self.mainFactory.dataLayerFactory().localPersistentStoreContext()
             return TVShowProvider(lps: lps)
-        }
+        }.inObjectScope(container)
     }
 }
 
