@@ -7,4 +7,5 @@ target 'TVShowManager' do
 
   # Pods for TVShowManager
   pod 'Swinject', '~>2.7.1'
+  pod 'Parse', '~>1.18.0'
 end

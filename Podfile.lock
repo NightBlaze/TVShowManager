@@ -1,16 +1,26 @@
 PODS:
+  - Bolts/Tasks (1.9.1)
+  - Parse (1.18.0):
+    - Parse/Core (= 1.18.0)
+  - Parse/Core (1.18.0):
+    - Bolts/Tasks (= 1.9.1)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
+  - Parse (~> 1.18.0)
   - Swinject (~> 2.7.1)
 
 SPEC REPOS:
   trunk:
+    - Bolts
+    - Parse
     - Swinject
 
 SPEC CHECKSUMS:
+  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  Parse: 79bdda34fdb7eb2a707a43a951c8aae236cb3e34
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 3a262e6f544f957f194bb2a0a1297b6381e30a08
+PODFILE CHECKSUM: 23efaa52ac575c00cca4f1673649fc7a3d9f3ce6
 
 COCOAPODS: 1.9.2

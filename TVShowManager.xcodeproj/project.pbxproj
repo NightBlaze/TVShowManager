@@ -56,6 +56,7 @@
 		FF33134F2483D13400C64F6D /* WatchedTVShowCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33134E2483D13400C64F6D /* WatchedTVShowCellViewModel.swift */; };
 		FF3313522483DDB100C64F6D /* Array+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313512483DDB100C64F6D /* Array+Access.swift */; };
 		FFC731212484123B003F021F /* WatchedTVShowFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */; };
+		FFC7312424842DFC003F021F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7312324842DFC003F021F /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		FF33134E2483D13400C64F6D /* WatchedTVShowCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedTVShowCellViewModel.swift; sourceTree = "<group>"; };
 		FF3313512483DDB100C64F6D /* Array+Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Access.swift"; sourceTree = "<group>"; };
 		FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedTVShowFlowLayout.swift; sourceTree = "<group>"; };
+		FFC7312324842DFC003F021F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				FF6E470D2482417B001BE330 /* DataLayer */,
 				FF1A0B242482502000E406E9 /* Extensions */,
 				FF1A0B152482454100E406E9 /* Factories */,
+				FFC7312224842DEB003F021F /* Network */,
 				FF3313392483A8F600C64F6D /* Providers */,
 				FF6E470B24824164001BE330 /* Resources */,
 				FF0722F52482DF2B005E986C /* Router */,
@@ -427,6 +430,14 @@
 			path = DataAccessObjects;
 			sourceTree = "<group>";
 		};
+		FFC7312224842DEB003F021F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FFC7312324842DFC003F021F /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,6 +589,7 @@
 				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
+				FFC7312424842DFC003F021F /* Network.swift in Sources */,
 				FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */,
 				FF33134F2483D13400C64F6D /* WatchedTVShowCellViewModel.swift in Sources */,
 				FF3313412483AE1500C64F6D /* TVShowViewModel.swift in Sources */,
