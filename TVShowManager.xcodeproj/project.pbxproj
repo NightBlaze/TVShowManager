@@ -44,6 +44,8 @@
 		FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B322482560700E406E9 /* DataLayerFactory.swift */; };
 		FF1A4C68248386A0006D4B23 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4C67248386A0006D4B23 /* ActionButton.swift */; };
 		FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */; };
+		FF3313372483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313352483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift */; };
+		FF3313382483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		FF1A0B322482560700E406E9 /* DataLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerFactory.swift; sourceTree = "<group>"; };
 		FF1A4C67248386A0006D4B23 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		FF1A4C6A2483877C006D4B23 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		FF3313352483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDAO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TVShowDAO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +358,8 @@
 		FF6E470E24824195001BE330 /* DataAccessObjects */ = {
 			isa = PBXGroup;
 			children = (
+				FF3313352483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift */,
+				FF3313362483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift */,
 				FF155C062482403100F76D38 /* TVShowManager.xcdatamodeld */,
 			);
 			path = DataAccessObjects;
@@ -490,6 +496,7 @@
 				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
 				FF0722F42482DDEB005E986C /* WatchedTVShowInteractor.swift in Sources */,
+				FF3313382483A73D00C64F6D /* TVShowDAO+CoreDataProperties.swift in Sources */,
 				FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */,
 				FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
@@ -497,6 +504,7 @@
 				FF0722DD2482B03D005E986C /* HomePresenter.swift in Sources */,
 				FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
+				FF3313372483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift in Sources */,
 				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
