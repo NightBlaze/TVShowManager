@@ -1,5 +1,5 @@
 //
-//  SaveTVShowDTO.swift
+//  SaveTVShowRequest.swift
 //  TVShowManager
 //
 //  Created by Alexander Timonenkov on 31.05.2020.
@@ -9,13 +9,11 @@
 import Foundation
 import Parse
 
-struct SaveTVShowDTO {
+struct SaveTVShowRequest {
     private(set) var pfObject: PFObject
 
     init(dao: TVShowDAO) {
-        pfObject = PFObject(className:"TVShow")
-        pfObject["title"] = dao.title ?? ""
-        pfObject["year"] = dao.year
-        pfObject["seasons"] = dao.seasons
+        let dto = TVShowDTO(dao: dao)
+        pfObject = dto.asPFObject()
     }
 }

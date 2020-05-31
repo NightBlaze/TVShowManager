@@ -22,6 +22,7 @@ protocol ITVShowProviderData {
     func savedTVShows() -> [TVShowDAO]?
     func addListener(_ listener: ITVShowProviderDataUpdateListener)
     func removeListener(_ listener: ITVShowProviderDataUpdateListener)
+    func fetchAndSaveAllTVShowsFromServer()
 }
 
 protocol ITVShowProviderDataUpdateListener: class {
@@ -88,6 +89,23 @@ extension TVShowProvider: ITVShowProviderData {
     func removeListener(_ listener: ITVShowProviderDataUpdateListener) {
         listeners.remove(listener)
     }
+
+    func fetchAndSaveAllTVShowsFromServer() {
+        let externalIds = savedTVShows()?.compactMap { $0.externalId }
+        let predicate = NSPredicate(format: "NOT (objectId in %@)", externalIds ?? [])
+        let request = FetchTVShowRequest(predicate: predicate)
+        network.fetchTVShows(request: request) { result in
+            DispatchQueue.global().async { [weak self] in
+                guard let self = self else { return }
+                if case .success(let tvShows) = result {
+                    (tvShows ?? []).forEach { tvShow in
+                        let dto = TVShowDTO(pfObject: tvShow)
+                        self.createTVShowInLPS(title: dto.title, year: dto.year, seasons: dto.seasons, externalId: dto.objectId)
+                    }
+                }
+            }
+        }
+    }
 }
 
 // MARK: - NSFetchedResultsControllerDelegate
@@ -115,9 +133,11 @@ extension TVShowProvider: NSFetchedResultsControllerDelegate {
     }
 
     private func notifyListenersAboutAdding(tvShow: TVShowDAO) {
-        listeners.allObjects.forEach { listener in
-            if let listener = listener as? ITVShowProviderDataUpdateListener {
-                listener.tvShowAdded(tvShow: tvShow)
+        DispatchQueue.main.async { [weak self] in
+            self?.listeners.allObjects.forEach { listener in
+                if let listener = listener as? ITVShowProviderDataUpdateListener {
+                    listener.tvShowAdded(tvShow: tvShow)
+                }
             }
         }
     }
@@ -126,14 +146,15 @@ extension TVShowProvider: NSFetchedResultsControllerDelegate {
 // MARK: - Private
 
 private extension TVShowProvider {
-    func createTVShowInLPS(title: String, year: Int, seasons: Int) -> TVShowDAO {
-        let tvShow = TVShowDAO.create(title: title, year: Int32(year), seasons: Int32(seasons), context: lps.backgroundContext)
+    @discardableResult
+    func createTVShowInLPS(title: String, year: Int, seasons: Int, externalId: String? = nil) -> TVShowDAO {
+        let tvShow = TVShowDAO.create(title: title, year: Int32(year), seasons: Int32(seasons), externalId: externalId, context: lps.backgroundContext)
         lps.save()
         return tvShow
     }
 
     func saveOnRemoteServer(tvShow: TVShowDAO, completion: @escaping (Result<String, Error>) -> Void) {
-        let dto = SaveTVShowDTO(dao: tvShow)
-        network.save(dto: dto, completion: completion)
+        let request = SaveTVShowRequest(dao: tvShow)
+        network.save(request: request, completion: completion)
     }
 }

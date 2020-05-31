@@ -39,6 +39,8 @@ final class HomeViewController: UIViewController {
         showTVShowButton.setTitle("home_view_controller.show_tv_show_button.title".localized, for: .normal)
 
         topImageView.layer.applyDefaultCornerRadius()
+
+        interactor.fetchTVShows()
     }
 }
 

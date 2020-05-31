@@ -51,7 +51,8 @@ final class ViewControllersFactory: IFactory {
 
         container.register(IHomeViewController.self) { _ in
             let presenter = HomePresenter()
-            let interactor = HomeInteractor(presenter: presenter)
+            let provider = self.mainFactory.providersFactory().tvShowProviderData()
+            let interactor = HomeInteractor(presenter: presenter, tvShowProvider: provider)
             let routerScenario = self.mainFactory.routerFactory().homeRouterScenario()
             let viewController = HomeViewController(interactor: interactor, router: routerScenario)
             presenter.resolveDependencies(viewController: viewController)

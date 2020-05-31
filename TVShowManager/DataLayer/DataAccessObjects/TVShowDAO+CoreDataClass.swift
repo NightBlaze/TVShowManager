@@ -12,12 +12,13 @@ import CoreData
 
 @objc(TVShowDAO)
 public class TVShowDAO: NSManagedObject {
-    class func create(title: String, year: Int32, seasons: Int32, context: NSManagedObjectContext) -> TVShowDAO {
+    class func create(title: String, year: Int32, seasons: Int32, externalId: String?, context: NSManagedObjectContext) -> TVShowDAO {
         let tvShow = TVShowDAO(entity: TVShowDAO.entity(), insertInto: context)
         tvShow.id = UUID()
         tvShow.title = title
         tvShow.year = year
         tvShow.seasons = seasons
+        tvShow.externalId = externalId
         tvShow.createdDate = Date()
         return tvShow
     }

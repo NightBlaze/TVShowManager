@@ -17,7 +17,8 @@ protocol INetworkInitializer {
 }
 
 protocol INetworkData {
-    func save(dto: SaveTVShowDTO, completion: @escaping (Result<String, Error>) -> Void)
+    func save(request: SaveTVShowRequest, completion: @escaping (Result<String, Error>) -> Void)
+    func fetchTVShows(request: FetchTVShowRequest, completion: @escaping (Result<[PFObject]?, Error>) -> Void)
 }
 
 final class Network: INetwork {
@@ -49,8 +50,8 @@ extension Network: INetworkInitializer {
 // MARK: - INetworkData
 
 extension Network: INetworkData {
-    func save(dto: SaveTVShowDTO, completion: @escaping (Result<String, Error>) -> Void) {
-        let objectToSave = dto.pfObject
+    func save(request: SaveTVShowRequest, completion: @escaping (Result<String, Error>) -> Void) {
+        let objectToSave = request.pfObject
         objectToSave.saveInBackground { (successed, error) in
             if let error = error {
                 completion(.failure(error))
@@ -60,6 +61,16 @@ extension Network: INetworkData {
                 completion(.success(objectId))
             } else {
                 completion(.failure(Errors.objectIdIsNil))
+            }
+        }
+    }
+
+    func fetchTVShows(request: FetchTVShowRequest, completion: @escaping (Result<[PFObject]?, Error>) -> Void) {
+        request.pfQuery.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(objects))
             }
         }
     }
