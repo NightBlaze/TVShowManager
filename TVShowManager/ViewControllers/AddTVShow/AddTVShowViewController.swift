@@ -12,6 +12,11 @@ protocol IAddTVShowViewController: UIViewController {
 }
 
 class AddTVShowViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UITextField!
+    @IBOutlet weak var yearLabel: UITextField!
+    @IBOutlet weak var seasonsNumber: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+
     let interactor: IAddTVShowInteractor
 
     init(interactor: IAddTVShowInteractor) {
@@ -25,10 +30,19 @@ class AddTVShowViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        saveButton.layer.cornerRadius = 16
     }
 }
 
 // MARK: - IAddTVShowViewController
 
 extension AddTVShowViewController: IAddTVShowViewController {
+}
+
+// MARK: - IBActions
+
+private extension AddTVShowViewController {
+    @IBAction func saveButtonDidPress(_ sender: Any) {
+    }
 }
