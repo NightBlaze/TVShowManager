@@ -25,8 +25,9 @@ final class ProvidersFactory: IFactory {
 
     func register() {
         container.register(ITVShowProvider.self) { [unowned self] _ in
+            let network = self.mainFactory.networkFactory().networkData()
             let lps = self.mainFactory.dataLayerFactory().localPersistentStoreContext()
-            return TVShowProvider(lps: lps)
+            return TVShowProvider(network: network, lps: lps)
         }.inObjectScope(.container)
     }
 }

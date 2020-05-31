@@ -39,8 +39,9 @@ final class ViewControllersFactory: IFactory {
 
         container.register(IAppStartViewController.self) { [unowned self] _ in
             let presenter = AppStartPresenter()
+            let network = self.mainFactory.networkFactory().networkInitializer()
             let lps = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
-            let interactor = AppStartInteractor(presenter: presenter, localPersistentStore: lps)
+            let interactor = AppStartInteractor(presenter: presenter, network: network, localPersistentStore: lps)
             let routerScenario = self.mainFactory.routerFactory().appStartRouterScenario()
             let viewController = AppStartViewController(interactor: interactor, routerScenario: routerScenario)
             presenter.resolveDependencies(viewController: viewController)

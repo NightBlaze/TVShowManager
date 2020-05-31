@@ -14,11 +14,14 @@ protocol IAppStartInteractor {
 
 final class AppStartInteractor {
     private let presenter: IAppStartPresenter
+    private let network: INetworkInitializer
     private let lps: ILocalPersistentStoreInitializer
 
     init(presenter: IAppStartPresenter,
+         network: INetworkInitializer,
          localPersistentStore: ILocalPersistentStoreInitializer) {
         self.presenter = presenter
+        self.network = network
         lps = localPersistentStore
     }
 }
@@ -27,6 +30,7 @@ final class AppStartInteractor {
 
 extension AppStartInteractor: IAppStartInteractor {
     func initializeApplication() {
+        network.initialize()
         lps.initializeLPS { [weak self] result in
             switch result {
             case .success(_):

@@ -57,6 +57,8 @@
 		FF3313522483DDB100C64F6D /* Array+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313512483DDB100C64F6D /* Array+Access.swift */; };
 		FFC731212484123B003F021F /* WatchedTVShowFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */; };
 		FFC7312424842DFC003F021F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7312324842DFC003F021F /* Network.swift */; };
+		FFC7312624843082003F021F /* NetworkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7312524843082003F021F /* NetworkFactory.swift */; };
+		FFC731292484343E003F021F /* SaveTVShowDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC731282484343E003F021F /* SaveTVShowDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,8 @@
 		FF3313512483DDB100C64F6D /* Array+Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Access.swift"; sourceTree = "<group>"; };
 		FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedTVShowFlowLayout.swift; sourceTree = "<group>"; };
 		FFC7312324842DFC003F021F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FFC7312524843082003F021F /* NetworkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFactory.swift; sourceTree = "<group>"; };
+		FFC731282484343E003F021F /* SaveTVShowDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTVShowDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +255,7 @@
 			children = (
 				FF1A0B322482560700E406E9 /* DataLayerFactory.swift */,
 				FF1A0B162482456700E406E9 /* Factory.swift */,
+				FFC7312524843082003F021F /* NetworkFactory.swift */,
 				FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */,
 				FF0722F82482E1A7005E986C /* RouterFactory.swift */,
 				FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */,
@@ -433,9 +438,18 @@
 		FFC7312224842DEB003F021F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FFC7312724843409003F021F /* DTOs */,
 				FFC7312324842DFC003F021F /* Network.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		FFC7312724843409003F021F /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				FFC731282484343E003F021F /* SaveTVShowDTO.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,6 +583,7 @@
 				FF1A0B2124824DBD00E406E9 /* AppStartInteractor.swift in Sources */,
 				FF33133B2483A91500C64F6D /* TVShowProvider.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
+				FFC7312624843082003F021F /* NetworkFactory.swift in Sources */,
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,
 				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
 				FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */,
@@ -586,6 +601,7 @@
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
 				FF3313442483C3D900C64F6D /* UIViewController+Alert.swift in Sources */,
 				FF3313372483A73D00C64F6D /* TVShowDAO+CoreDataClass.swift in Sources */,
+				FFC731292484343E003F021F /* SaveTVShowDTO.swift in Sources */,
 				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,

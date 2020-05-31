@@ -29,11 +29,14 @@ protocol ITVShowProviderDataUpdateListener: class {
 }
 
 final class TVShowProvider: NSObject, ITVShowProvider {
+    private let network: INetworkData
     private let lps: ILocalPersistentStoreContext
     private let fetchedResultsController: NSFetchedResultsController<TVShowDAO>
     private var listeners = NSHashTable<AnyObject>(options: .weakMemory)
 
-    init(lps: ILocalPersistentStoreContext) {
+    init(network: INetworkData,
+         lps: ILocalPersistentStoreContext) {
+        self.network = network
         self.lps = lps
 
         let request: NSFetchRequest<TVShowDAO> = TVShowDAO.fetchRequest()
@@ -52,10 +55,17 @@ final class TVShowProvider: NSObject, ITVShowProvider {
 
 extension TVShowProvider: ITVShowProviderCreator {
     func createTVShow(title: String, year: Int, seasons: Int, completion: @escaping (Result<TVShowDAO, Error>) -> Void) {
-        let tvShow = TVShowDAO.create(title: title, year: Int32(year), seasons: Int32(seasons), context: lps.backgroundContext)
-        lps.save()
-        // TODO: save to server
-        completion(.success(tvShow))
+        let tvShow = createTVShowInLPS(title: title, year: year, seasons: seasons)
+        saveOnRemoteServer(tvShow: tvShow) { _ in
+            // Ignore result of saving TV show on remote server
+            // because this behaviour is business-logic related,
+            // e.g. we can remove the TV show locally, apply retry policy
+            // or just show alert. Also handle error situation here
+            // is out of scope this case study
+            //
+            // So just tell that creating and saving of TV show is success
+            completion(.success(tvShow))
+        }
     }
 }
 
@@ -106,5 +116,20 @@ extension TVShowProvider: NSFetchedResultsControllerDelegate {
                 listener.tvShowAdded(tvShow: tvShow)
             }
         }
+    }
+}
+
+// MARK: - Private
+
+private extension TVShowProvider {
+    func createTVShowInLPS(title: String, year: Int, seasons: Int) -> TVShowDAO {
+        let tvShow = TVShowDAO.create(title: title, year: Int32(year), seasons: Int32(seasons), context: lps.backgroundContext)
+        lps.save()
+        return tvShow
+    }
+
+    func saveOnRemoteServer(tvShow: TVShowDAO, completion: @escaping (Result<Bool, Error>) -> Void) {
+        let dto = SaveTVShowDTO(dao: tvShow)
+        network.save(dto: dto, completion: completion)
     }
 }
