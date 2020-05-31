@@ -1,5 +1,5 @@
 //
-//  AppStartViewControllerPresenter.swift
+//  AppStartPresenter.swift
 //  TVShowManager
 //
 //  Created by Alexander Timonenkov on 30.05.2020.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol IAppStartViewControllerPresenter {
+protocol IAppStartPresenter {
     func initializationSuccessed()
     func initializationFailed()
 }
 
-final class AppStartViewControllerPresenter {
+final class AppStartPresenter {
     weak var viewController: IAppStartViewController?
 
     func resolveDependencies(viewController: IAppStartViewController) {
@@ -21,9 +21,9 @@ final class AppStartViewControllerPresenter {
     }
 }
 
-// MARK: - IAppStartViewControllerPresenter
+// MARK: - IAppStartPresenter
 
-extension AppStartViewControllerPresenter: IAppStartViewControllerPresenter {
+extension AppStartPresenter: IAppStartPresenter {
     func initializationSuccessed() {
         viewController?.goToHomeViewController()
     }

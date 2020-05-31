@@ -1,5 +1,5 @@
 //
-//  AppStartViewControllerInteractor.swift
+//  AppStartInteractor.swift
 //  TVShowManager
 //
 //  Created by Alexander Timonenkov on 30.05.2020.
@@ -8,24 +8,24 @@
 
 import Foundation
 
-protocol IAppStartViewControllerInteractor {
+protocol IAppStartInteractor {
     func initializeApplication()
 }
 
-final class AppStartViewControllerInteractor {
-    let presenter: IAppStartViewControllerPresenter
+final class AppStartInteractor {
+    let presenter: IAppStartPresenter
     let lps: ILocalPersistentStoreInitializer
 
-    init(presenter: IAppStartViewControllerPresenter,
+    init(presenter: IAppStartPresenter,
          localPersistentStore: ILocalPersistentStoreInitializer) {
         self.presenter = presenter
         lps = localPersistentStore
     }
 }
 
-// MARK: - IAppStartViewControllerInteractor
+// MARK: - IAppStartInteractor
 
-extension AppStartViewControllerInteractor: IAppStartViewControllerInteractor {
+extension AppStartInteractor: IAppStartInteractor {
     func initializeApplication() {
         lps.initializeLPS { [weak self] result in
             switch result {

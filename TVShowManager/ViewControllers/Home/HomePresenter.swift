@@ -1,5 +1,5 @@
 //
-//  HomeViewControllerPresenter.swift
+//  HomePresenter.swift
 //  TVShowManager
 //
 //  Created by Alexander Timonenkov on 30.05.2020.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol IHomeViewControllerPresenter {
+protocol IHomePresenter {
 }
 
-class HomeViewControllerPresenter {
+class HomePresenter {
     weak var viewController: IHomeViewController?
 
     func resolveDependencies(viewController: IHomeViewController) {
@@ -19,7 +19,7 @@ class HomeViewControllerPresenter {
     }
 }
 
-// MARK: - IHomeViewControllerPresenter
+// MARK: - IHomePresenter
 
-extension HomeViewControllerPresenter: IHomeViewControllerPresenter {
+extension HomePresenter: IHomePresenter {
 }

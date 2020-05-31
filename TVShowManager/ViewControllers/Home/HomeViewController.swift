@@ -16,9 +16,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var addTVShowButton: ActionButton!
     @IBOutlet weak var showTVShowButton: ActionButton!
     
-    let interactor: IHomeViewControllerInteractor
+    let interactor: IHomeInteractor
 
-    init(interactor: IHomeViewControllerInteractor) {
+    init(interactor: IHomeInteractor) {
         self.interactor = interactor
         super.init(nibName: HomeViewController.nameOfClass(), bundle: nil)
     }

@@ -14,8 +14,8 @@
 		FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D32482AF32005E986C /* UIViewController+Window.swift */; };
 		FF0722D82482B019005E986C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722D62482B019005E986C /* HomeViewController.swift */; };
 		FF0722D92482B019005E986C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722D72482B019005E986C /* HomeViewController.xib */; };
-		FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */; };
-		FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */; };
+		FF0722DB2482B02C005E986C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DA2482B02C005E986C /* HomeInteractor.swift */; };
+		FF0722DD2482B03D005E986C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DC2482B03D005E986C /* HomePresenter.swift */; };
 		FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */; };
 		FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0722E42482DBE9005E986C /* AddTVShowViewController.swift */; };
 		FF0722E72482DBE9005E986C /* AddTVShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF0722E52482DBE9005E986C /* AddTVShowViewController.xib */; };
@@ -36,8 +36,8 @@
 		FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */; };
 		FF1A0B1E24824D8B00E406E9 /* AppStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B1C24824D8B00E406E9 /* AppStartViewController.swift */; };
 		FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */; };
-		FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */; };
-		FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */; };
+		FF1A0B2124824DBD00E406E9 /* AppStartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2024824DBD00E406E9 /* AppStartInteractor.swift */; };
+		FF1A0B2324824DCC00E406E9 /* AppStartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2224824DCC00E406E9 /* AppStartPresenter.swift */; };
 		FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B252482504200E406E9 /* NSObject+Extensions.swift */; };
 		FF1A0B292482513B00E406E9 /* LocalPersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B282482513B00E406E9 /* LocalPersistentStore.swift */; };
 		FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A0B2D2482530200E406E9 /* FileManager+URLs.swift */; };
@@ -58,8 +58,8 @@
 		FF0722D32482AF32005E986C /* UIViewController+Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Window.swift"; sourceTree = "<group>"; };
 		FF0722D62482B019005E986C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF0722D72482B019005E986C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerInteractor.swift; sourceTree = "<group>"; };
-		FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerPresenter.swift; sourceTree = "<group>"; };
+		FF0722DA2482B02C005E986C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FF0722DC2482B03D005E986C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		FF0722DE2482B4C9005E986C /* UIViewController+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UINavigationController.swift"; sourceTree = "<group>"; };
 		FF0722E42482DBE9005E986C /* AddTVShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowViewController.swift; sourceTree = "<group>"; };
 		FF0722E52482DBE9005E986C /* AddTVShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTVShowViewController.xib; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 		FF1A0B182482473000E406E9 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		FF1A0B1C24824D8B00E406E9 /* AppStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewController.swift; sourceTree = "<group>"; };
 		FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppStartViewController.xib; sourceTree = "<group>"; };
-		FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewControllerInteractor.swift; sourceTree = "<group>"; };
-		FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartViewControllerPresenter.swift; sourceTree = "<group>"; };
+		FF1A0B2024824DBD00E406E9 /* AppStartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartInteractor.swift; sourceTree = "<group>"; };
+		FF1A0B2224824DCC00E406E9 /* AppStartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartPresenter.swift; sourceTree = "<group>"; };
 		FF1A0B252482504200E406E9 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		FF1A0B282482513B00E406E9 /* LocalPersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPersistentStore.swift; sourceTree = "<group>"; };
 		FF1A0B2D2482530200E406E9 /* FileManager+URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+URLs.swift"; sourceTree = "<group>"; };
@@ -141,10 +141,10 @@
 		FF0722D52482AFF6005E986C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FF0722DA2482B02C005E986C /* HomeInteractor.swift */,
+				FF0722DC2482B03D005E986C /* HomePresenter.swift */,
 				FF0722D62482B019005E986C /* HomeViewController.swift */,
 				FF0722D72482B019005E986C /* HomeViewController.xib */,
-				FF0722DA2482B02C005E986C /* HomeViewControllerInteractor.swift */,
-				FF0722DC2482B03D005E986C /* HomeViewControllerPresenter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -228,10 +228,10 @@
 		FF1A0B1B24824D5700E406E9 /* AppStart */ = {
 			isa = PBXGroup;
 			children = (
+				FF1A0B2024824DBD00E406E9 /* AppStartInteractor.swift */,
+				FF1A0B2224824DCC00E406E9 /* AppStartPresenter.swift */,
 				FF1A0B1C24824D8B00E406E9 /* AppStartViewController.swift */,
 				FF1A0B1D24824D8B00E406E9 /* AppStartViewController.xib */,
-				FF1A0B2024824DBD00E406E9 /* AppStartViewControllerInteractor.swift */,
-				FF1A0B2224824DCC00E406E9 /* AppStartViewControllerPresenter.swift */,
 				FF0722C62482A183005E986C /* AppStartViewModel.swift */,
 			);
 			path = AppStart;
@@ -481,10 +481,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */,
-				FF1A0B2324824DCC00E406E9 /* AppStartViewControllerPresenter.swift in Sources */,
+				FF1A0B2324824DCC00E406E9 /* AppStartPresenter.swift in Sources */,
 				FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */,
 				FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */,
-				FF1A0B2124824DBD00E406E9 /* AppStartViewControllerInteractor.swift in Sources */,
+				FF1A0B2124824DBD00E406E9 /* AppStartInteractor.swift in Sources */,
 				FF155BFE2482403100F76D38 /* AppDelegate.swift in Sources */,
 				FF1A0B2E2482530200E406E9 /* FileManager+URLs.swift in Sources */,
 				FF1A0B262482504200E406E9 /* NSObject+Extensions.swift in Sources */,
@@ -494,7 +494,7 @@
 				FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
 				FF0722F72482DF57005E986C /* Router.swift in Sources */,
-				FF0722DD2482B03D005E986C /* HomeViewControllerPresenter.swift in Sources */,
+				FF0722DD2482B03D005E986C /* HomePresenter.swift in Sources */,
 				FF0722E62482DBE9005E986C /* AddTVShowViewController.swift in Sources */,
 				FF155C002482403100F76D38 /* SceneDelegate.swift in Sources */,
 				FF0722DF2482B4C9005E986C /* UIViewController+UINavigationController.swift in Sources */,
@@ -503,7 +503,7 @@
 				FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */,
 				FF0722F92482E1A7005E986C /* RouterFactory.swift in Sources */,
 				FF0722F22482DDEB005E986C /* WatchedTVShowViewController.swift in Sources */,
-				FF0722DB2482B02C005E986C /* HomeViewControllerInteractor.swift in Sources */,
+				FF0722DB2482B02C005E986C /* HomeInteractor.swift in Sources */,
 				FF1A0B172482456700E406E9 /* Factory.swift in Sources */,
 				FF0722F12482DDEB005E986C /* WatchedTVShowPresenter.swift in Sources */,
 				FF1A0B192482473000E406E9 /* ViewControllersFactory.swift in Sources */,

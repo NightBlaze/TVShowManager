@@ -36,9 +36,9 @@ final class ViewControllersFactory: IFactory {
         }
 
         container.register(IAppStartViewController.self) { [unowned self] _ in
-            let presenter = AppStartViewControllerPresenter()
+            let presenter = AppStartPresenter()
             let lps = self.mainFactory.dataLayerFactory().localPersistentStoreInitializer()
-            let interactor = AppStartViewControllerInteractor(presenter: presenter, localPersistentStore: lps)
+            let interactor = AppStartInteractor(presenter: presenter, localPersistentStore: lps)
             let routerScenario = self.mainFactory.routerFactory().appStartRouterScenario()
             let viewController = AppStartViewController(interactor: interactor, routerScenario: routerScenario)
             presenter.resolveDependencies(viewController: viewController)
@@ -47,8 +47,8 @@ final class ViewControllersFactory: IFactory {
         }
 
         container.register(IHomeViewController.self) { _ in
-            let presenter = HomeViewControllerPresenter()
-            let interactor = HomeViewControllerInteractor(presenter: presenter)
+            let presenter = HomePresenter()
+            let interactor = HomeInteractor(presenter: presenter)
             let viewController = HomeViewController(interactor: interactor)
             presenter.resolveDependencies(viewController: viewController)
 

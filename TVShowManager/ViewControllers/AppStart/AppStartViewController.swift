@@ -16,10 +16,10 @@ protocol IAppStartViewController: UIViewController {
 class AppStartViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
 
-    let interactor: IAppStartViewControllerInteractor
+    let interactor: IAppStartInteractor
     let routerScenario: IAppStartRouterScenario
 
-    init(interactor: IAppStartViewControllerInteractor,
+    init(interactor: IAppStartInteractor,
          routerScenario: IAppStartRouterScenario) {
         self.interactor = interactor
         self.routerScenario = routerScenario
