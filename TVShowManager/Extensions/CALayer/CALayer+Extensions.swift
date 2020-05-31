@@ -21,4 +21,29 @@ extension CALayer {
     func applyDefaultCornerRadius() -> Self {
         return applyCornerRadius(CALayer.defaultCornerRadius)
     }
+
+    @discardableResult
+    func applyShadow(color: UIColor,
+                     offset: CGSize,
+                     opacity: Float,
+                     radius: CGFloat,
+                     rasterize: Bool) -> Self {
+        self.masksToBounds = false
+        self.shadowColor = color.cgColor
+        self.shadowOffset = offset
+        self.shadowOpacity = opacity
+        self.shadowRadius = radius
+        self.shouldRasterize = rasterize
+        self.rasterizationScale = UIScreen.main.scale
+        return self
+    }
+
+    @discardableResult
+    func applyDefaultShadow() -> Self {
+        return self.applyShadow(color: .black,
+                                offset: .zero,
+                                opacity: 0.2,
+                                radius: 2,
+                                rasterize: true)
+    }
 }

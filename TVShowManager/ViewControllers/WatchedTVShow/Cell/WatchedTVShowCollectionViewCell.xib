@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WatchedTVShowCollectionViewCell" id="gTV-IL-0wX" customClass="WatchedTVShowCollectionViewCell" customModule="TVShowManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="291" height="123"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="291" height="123"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-LK-Pz2">
+                        <rect key="frame" x="2" y="2" width="287" height="119"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ6-ah-ExW">
+                                <rect key="frame" x="16" y="16" width="52.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmz-O9-H14">
+                                <rect key="frame" x="16" y="57.5" width="34" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWG-Pm-0wq">
+                                <rect key="frame" x="16" y="86" width="65" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nJ6-ah-ExW" secondAttribute="trailing" constant="16" id="0GE-uJ-dVF"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pmz-O9-H14" secondAttribute="trailing" constant="16" id="6wj-8v-ydz"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FWG-Pm-0wq" secondAttribute="trailing" constant="16" id="Chj-5M-8v4"/>
+                            <constraint firstItem="FWG-Pm-0wq" firstAttribute="top" secondItem="Pmz-O9-H14" secondAttribute="bottom" constant="8" id="FYD-FG-HIu"/>
+                            <constraint firstItem="nJ6-ah-ExW" firstAttribute="top" secondItem="nYI-LK-Pz2" secondAttribute="top" constant="16" id="Gja-Qb-hbb"/>
+                            <constraint firstItem="FWG-Pm-0wq" firstAttribute="leading" secondItem="Pmz-O9-H14" secondAttribute="leading" id="LA2-Qb-PK4"/>
+                            <constraint firstItem="Pmz-O9-H14" firstAttribute="leading" secondItem="nJ6-ah-ExW" secondAttribute="leading" id="PaY-kx-vRF"/>
+                            <constraint firstItem="nJ6-ah-ExW" firstAttribute="leading" secondItem="nYI-LK-Pz2" secondAttribute="leading" constant="16" id="qRU-vN-bTX"/>
+                            <constraint firstItem="Pmz-O9-H14" firstAttribute="top" secondItem="nJ6-ah-ExW" secondAttribute="bottom" constant="8" id="u9l-FY-A1N"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nYI-LK-Pz2" secondAttribute="bottom" constant="2" id="24p-Bp-Qxq"/>
+                <constraint firstItem="nYI-LK-Pz2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Iaf-lq-hSh"/>
+                <constraint firstItem="nYI-LK-Pz2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="T4d-dz-5zV"/>
+                <constraint firstAttribute="trailing" secondItem="nYI-LK-Pz2" secondAttribute="trailing" constant="2" id="tJ2-tz-ch1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="291" height="127"/>
+            <connections>
+                <outlet property="containerView" destination="nYI-LK-Pz2" id="U0q-RT-OLr"/>
+                <outlet property="seasonsLabel" destination="FWG-Pm-0wq" id="DCJ-kT-kGh"/>
+                <outlet property="titleLabel" destination="nJ6-ah-ExW" id="ZqC-9S-2yp"/>
+                <outlet property="yearLabel" destination="Pmz-O9-H14" id="iTY-Aw-iUp"/>
+            </connections>
+            <point key="canvasLocation" x="312.31884057971018" y="137.61160714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

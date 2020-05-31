@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WatchedTVShowViewController" customModule="TVShowManager" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="GRw-D0-LAO" id="fLc-zI-jCp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +17,27 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GRw-D0-LAO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.98039215686274506" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QLa-6q-Tyx">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="GRw-D0-LAO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2Gw-DN-qqw"/>
+                <constraint firstItem="GRw-D0-LAO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bQd-is-iF7"/>
+                <constraint firstItem="GRw-D0-LAO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="dg9-u7-y73"/>
+                <constraint firstItem="GRw-D0-LAO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o5h-6b-7ca"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="113"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </view>
     </objects>
 </document>

@@ -56,5 +56,6 @@ private extension HomeViewController {
     }
 
     @IBAction func showTVShowButtonDidPress(_ sender: Any) {
+        routerScenario.goToWatchedTVShow(from: self)
     }
 }

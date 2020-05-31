@@ -50,6 +50,12 @@
 		FF33133D2483AA1F00C64F6D /* ProvidersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */; };
 		FF3313412483AE1500C64F6D /* TVShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313402483AE1500C64F6D /* TVShowViewModel.swift */; };
 		FF3313442483C3D900C64F6D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313432483C3D900C64F6D /* UIViewController+Alert.swift */; };
+		FF3313482483D01F00C64F6D /* UICollectionViewCell+Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313472483D01F00C64F6D /* UICollectionViewCell+Creating.swift */; };
+		FF33134C2483D10700C64F6D /* WatchedTVShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33134A2483D10700C64F6D /* WatchedTVShowCollectionViewCell.swift */; };
+		FF33134D2483D10700C64F6D /* WatchedTVShowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF33134B2483D10700C64F6D /* WatchedTVShowCollectionViewCell.xib */; };
+		FF33134F2483D13400C64F6D /* WatchedTVShowCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33134E2483D13400C64F6D /* WatchedTVShowCellViewModel.swift */; };
+		FF3313522483DDB100C64F6D /* Array+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3313512483DDB100C64F6D /* Array+Access.swift */; };
+		FFC731212484123B003F021F /* WatchedTVShowFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +108,12 @@
 		FF33133C2483AA1F00C64F6D /* ProvidersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersFactory.swift; sourceTree = "<group>"; };
 		FF3313402483AE1500C64F6D /* TVShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewModel.swift; sourceTree = "<group>"; };
 		FF3313432483C3D900C64F6D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		FF3313472483D01F00C64F6D /* UICollectionViewCell+Creating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Creating.swift"; sourceTree = "<group>"; };
+		FF33134A2483D10700C64F6D /* WatchedTVShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedTVShowCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF33134B2483D10700C64F6D /* WatchedTVShowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchedTVShowCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF33134E2483D13400C64F6D /* WatchedTVShowCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedTVShowCellViewModel.swift; sourceTree = "<group>"; };
+		FF3313512483DDB100C64F6D /* Array+Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Access.swift"; sourceTree = "<group>"; };
+		FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedTVShowFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,8 @@
 		FF0722EC2482DDA4005E986C /* WatchedTVShow */ = {
 			isa = PBXGroup;
 			children = (
+				FF3313492483D0BE00C64F6D /* Cell */,
+				FFC731202484123B003F021F /* WatchedTVShowFlowLayout.swift */,
 				FF0722F02482DDEB005E986C /* WatchedTVShowInteractor.swift */,
 				FF0722ED2482DDEB005E986C /* WatchedTVShowPresenter.swift */,
 				FF0722EE2482DDEB005E986C /* WatchedTVShowViewController.swift */,
@@ -256,10 +270,12 @@
 		FF1A0B242482502000E406E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FF3313502483DD9700C64F6D /* Array */,
 				FF1A4C6924838764006D4B23 /* CALayer */,
 				FF1A0B2C248252E800E406E9 /* FileManager */,
 				FF1A0B2A248252B200E406E9 /* NSObject */,
 				FF0722CF2482AD73005E986C /* String */,
+				FF3313462483D00300C64F6D /* UICollectionViewCell */,
 				FF0722D22482AF02005E986C /* UIViewController */,
 			);
 			path = Extensions;
@@ -319,6 +335,32 @@
 				FF33133A2483A91500C64F6D /* TVShowProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		FF3313462483D00300C64F6D /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF3313472483D01F00C64F6D /* UICollectionViewCell+Creating.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		FF3313492483D0BE00C64F6D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF33134E2483D13400C64F6D /* WatchedTVShowCellViewModel.swift */,
+				FF33134A2483D10700C64F6D /* WatchedTVShowCollectionViewCell.swift */,
+				FF33134B2483D10700C64F6D /* WatchedTVShowCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FF3313502483DD9700C64F6D /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				FF3313512483DDB100C64F6D /* Array+Access.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 		FF6E470824824121001BE330 /* Application */ = {
@@ -453,6 +495,7 @@
 				FF0722D92482B019005E986C /* HomeViewController.xib in Resources */,
 				FF1A0B1F24824D8B00E406E9 /* AppStartViewController.xib in Resources */,
 				FF155C0A2482403200F76D38 /* Assets.xcassets in Resources */,
+				FF33134D2483D10700C64F6D /* WatchedTVShowCollectionViewCell.xib in Resources */,
 				FF0722E72482DBE9005E986C /* AddTVShowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +551,8 @@
 			files = (
 				FF155C082482403100F76D38 /* TVShowManager.xcdatamodeld in Sources */,
 				FF1A0B2324824DCC00E406E9 /* AppStartPresenter.swift in Sources */,
+				FF33134C2483D10700C64F6D /* WatchedTVShowCollectionViewCell.swift in Sources */,
+				FF3313522483DDB100C64F6D /* Array+Access.swift in Sources */,
 				FF0722C72482A183005E986C /* AppStartViewModel.swift in Sources */,
 				FF1A4C6B2483877C006D4B23 /* CALayer+Extensions.swift in Sources */,
 				FF1A0B2124824DBD00E406E9 /* AppStartInteractor.swift in Sources */,
@@ -521,6 +566,8 @@
 				FF33133D2483AA1F00C64F6D /* ProvidersFactory.swift in Sources */,
 				FF0722E92482DC07005E986C /* AddTVShowInteractor.swift in Sources */,
 				FF0722D42482AF32005E986C /* UIViewController+Window.swift in Sources */,
+				FFC731212484123B003F021F /* WatchedTVShowFlowLayout.swift in Sources */,
+				FF3313482483D01F00C64F6D /* UICollectionViewCell+Creating.swift in Sources */,
 				FF0722D12482AD8C005E986C /* String+Localization.swift in Sources */,
 				FF0722F72482DF57005E986C /* Router.swift in Sources */,
 				FF0722DD2482B03D005E986C /* HomePresenter.swift in Sources */,
@@ -532,6 +579,7 @@
 				FF0722D82482B019005E986C /* HomeViewController.swift in Sources */,
 				FF1A0B332482560700E406E9 /* DataLayerFactory.swift in Sources */,
 				FF0722EB2482DC22005E986C /* AddTVShowPresenter.swift in Sources */,
+				FF33134F2483D13400C64F6D /* WatchedTVShowCellViewModel.swift in Sources */,
 				FF3313412483AE1500C64F6D /* TVShowViewModel.swift in Sources */,
 				FF0722F92482E1A7005E986C /* RouterFactory.swift in Sources */,
 				FF0722F22482DDEB005E986C /* WatchedTVShowViewController.swift in Sources */,

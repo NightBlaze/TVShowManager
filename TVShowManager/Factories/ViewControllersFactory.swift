@@ -60,7 +60,11 @@ final class ViewControllersFactory: IFactory {
 
         container.register(IWatchedTVShowViewController.self) { _ in
             let presenter = WatchedTVShowPresenter()
-            let interactor = WatchedTVShowInteractor(presenter: presenter)
+            let providerData = self.mainFactory.providersFactory().tvShowProviderData()
+            let providerCreator = self.mainFactory.providersFactory().tvShowProviderCreator()
+            let interactor = WatchedTVShowInteractor(presenter: presenter,
+                                                     tvShowProviderData: providerData,
+                                                     tvShowProviderCreator: providerCreator)
             let viewController = WatchedTVShowViewController(interactor: interactor)
             presenter.resolveDependencies(viewController: viewController)
 

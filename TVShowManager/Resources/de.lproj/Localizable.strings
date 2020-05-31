@@ -25,3 +25,13 @@
 "home_view_controller.title" = "TV-Show-Manager";
 "home_view_controller.add_tv_show_button.title" = "Neue TV-Show hinzufügen";
 "home_view_controller.show_tv_show_button.title" = "Show sah TV-Show";
+
+// WatchedTVShowViewController
+"watched_tv_show_view_controller.title" = "Schaute";
+"watched_tv_show_view_controller.add_tv_show_button.title" = "Hinzufügen";
+"watched_tv_show_view_controller.question_mark.title" = "?";
+"watched_tv_show_view_controller.simulate.about" = "Um das Hinzufügen einer Fernsehsendung durch einen anderen Vorgang (z. B. Hintergrundabruf) zu simulieren, klicken Sie auf die Schaltfläche \"Hinzufügen\"";
+
+// WatchedTVShowCollectionViewCell
+"watched_tv_show_cell.year" = "Jahr:";
+"watched_tv_show_cell.seasons" = "Jahreszeiten:";

@@ -25,3 +25,13 @@
 "home_view_controller.title" = "TV Show Manager";
 "home_view_controller.add_tv_show_button.title" = "Add new TV show";
 "home_view_controller.show_tv_show_button.title" = "Show watched TV show";
+
+// WatchedTVShowViewController
+"watched_tv_show_view_controller.title" = "Watched";
+"watched_tv_show_view_controller.add_tv_show_button.title" = "Add";
+"watched_tv_show_view_controller.question_mark.title" = "?";
+"watched_tv_show_view_controller.simulate.about" = "To simulate adding of TV show by another process (e.g. background fetch) press 'Add' button";
+
+// WatchedTVShowCollectionViewCell
+"watched_tv_show_cell.year" = "Year:";
+"watched_tv_show_cell.seasons" = "Seasons:";

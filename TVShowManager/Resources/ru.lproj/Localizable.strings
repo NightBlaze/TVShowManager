@@ -25,3 +25,13 @@
 "home_view_controller.title" = "Менеджер сериалов";
 "home_view_controller.add_tv_show_button.title" = "Добавить сериал";
 "home_view_controller.show_tv_show_button.title" = "Список сериалов";
+
+// WatchedTVShowViewController
+"watched_tv_show_view_controller.title" = "Просмотрено";
+"watched_tv_show_view_controller.add_tv_show_button.title" = "Добавить";
+"watched_tv_show_view_controller.question_mark.title" = "?";
+"watched_tv_show_view_controller.simulate.about" = "Чтобы симулировать добавление сериала другим потоком (например, сетевой запрос в бэкграунде), нажмите кнопку 'Добавить'";
+
+// WatchedTVShowCollectionViewCell
+"watched_tv_show_cell.year" = "Год:";
+"watched_tv_show_cell.seasons" = "Сезонов:";

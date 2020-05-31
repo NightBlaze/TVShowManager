@@ -7,19 +7,44 @@
 //
 
 import Foundation
+import CoreData
 
-protocol ITVShowProvider: ITVShowProviderCreator {
+typealias UpdatedItem = (TVShowDAO) -> Void
+
+protocol ITVShowProvider: ITVShowProviderCreator, ITVShowProviderData {
 }
 
 protocol ITVShowProviderCreator {
     func createTVShow(title: String, year: Int, seasons: Int, completion: @escaping (Result<TVShowDAO, Error>) -> Void)
 }
 
-final class TVShowProvider: ITVShowProvider {
+protocol ITVShowProviderData {
+    func savedTVShows() -> [TVShowDAO]?
+    func addListener(_ listener: ITVShowProviderDataUpdateListener)
+    func removeListener(_ listener: ITVShowProviderDataUpdateListener)
+}
+
+protocol ITVShowProviderDataUpdateListener: class {
+    func tvShowAdded(tvShow: TVShowDAO)
+}
+
+final class TVShowProvider: NSObject, ITVShowProvider {
     private let lps: ILocalPersistentStoreContext
+    private let fetchedResultsController: NSFetchedResultsController<TVShowDAO>
+    private var listeners = NSHashTable<AnyObject>(options: .weakMemory)
 
     init(lps: ILocalPersistentStoreContext) {
         self.lps = lps
+
+        let request: NSFetchRequest<TVShowDAO> = TVShowDAO.fetchRequest()
+        let sort = NSSortDescriptor(key: "createdDate", ascending: true)
+        request.sortDescriptors = [sort]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: lps.backgroundContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: nil)
+        super.init()
+        fetchedResultsController.delegate = self
     }
 }
 
@@ -31,5 +56,55 @@ extension TVShowProvider: ITVShowProviderCreator {
         lps.save()
         // TODO: save to server
         completion(.success(tvShow))
+    }
+}
+
+// MARK: - ITVShowProviderData
+
+extension TVShowProvider: ITVShowProviderData {
+    func savedTVShows() -> [TVShowDAO]? {
+        try? fetchedResultsController.performFetch()
+        return fetchedResultsController.fetchedObjects
+    }
+
+    func addListener(_ listener: ITVShowProviderDataUpdateListener) {
+        listeners.add(listener)
+    }
+
+    func removeListener(_ listener: ITVShowProviderDataUpdateListener) {
+        listeners.remove(listener)
+    }
+}
+
+// MARK: - NSFetchedResultsControllerDelegate
+
+extension TVShowProvider: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any,
+                    at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType,
+                    newIndexPath: IndexPath?) {
+        guard let tvShow = anObject as? TVShowDAO else { return }
+        switch type {
+        case .insert:
+            notifyListenersAboutAdding(tvShow: tvShow)
+            break
+        case .delete:
+            break
+        case .update:
+            break
+        case .move:
+            break
+        @unknown default:
+            break
+        }
+    }
+
+    private func notifyListenersAboutAdding(tvShow: TVShowDAO) {
+        listeners.allObjects.forEach { listener in
+            if let listener = listener as? ITVShowProviderDataUpdateListener {
+                listener.tvShowAdded(tvShow: tvShow)
+            }
+        }
     }
 }
