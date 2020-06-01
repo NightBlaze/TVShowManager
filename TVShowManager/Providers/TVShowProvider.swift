@@ -41,7 +41,7 @@ final class TVShowProvider: NSObject, ITVShowProvider {
         self.lps = lps
 
         let request: NSFetchRequest<TVShowDAO> = TVShowDAO.fetchRequest()
-        let sort = NSSortDescriptor(key: "createdDate", ascending: true)
+        let sort = NSSortDescriptor(key: "createdDate", ascending: false)
         request.sortDescriptors = [sort]
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
                                                               managedObjectContext: lps.backgroundContext,

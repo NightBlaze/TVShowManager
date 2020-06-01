@@ -68,13 +68,13 @@ extension WatchedTVShowViewController: IWatchedTVShowViewController {
     }
 
     func add(viewModel: WatchedTVShowCellViewModel) {
-        viewModels.append(viewModel)
+        viewModels.insert(viewModel, at: 0)
 
-        let indexPath = IndexPath(item: viewModels.count - 1, section: 0)
+        let indexPath = IndexPath(item: 0, section: 0)
         collectionView.performBatchUpdates({
             collectionView.insertItems(at: [indexPath])
         })
-        collectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
     }
 }
 
