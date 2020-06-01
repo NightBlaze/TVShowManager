@@ -9,8 +9,6 @@
 import Foundation
 import CoreData
 
-typealias UpdatedItem = (TVShowDAO) -> Void
-
 protocol ITVShowProvider: ITVShowProviderCreator, ITVShowProviderData {
 }
 
